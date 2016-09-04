@@ -31,7 +31,7 @@ namespace TGEM.Items.Weapons
         }
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, 50, knockBack, player.whoAmI, 0f, 0f); //This is spawning a projectile of type FrostburnArrow using the original stats
+            Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, 50, knockBack, player.whoAmI, 0f, 0f);
             return false; //Makes sure to not fire the original projectile
         }
         public override void AddRecipes()  
