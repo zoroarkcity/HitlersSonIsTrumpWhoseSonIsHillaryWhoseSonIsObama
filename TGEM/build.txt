@@ -1,0 +1,3 @@
+author = Zoroarkcity
+version = 0.1
+displayName = Terraria General Expansion Mod
