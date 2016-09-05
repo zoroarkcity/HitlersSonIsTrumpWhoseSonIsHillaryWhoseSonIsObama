@@ -19,7 +19,7 @@ namespace TGEM.Items.Weapons.Ranged
             item.width = 14;
             item.height = 21;
             item.toolTip = "Transforms all arrows into stinger arrows, fires like a shotgun";
-            item.useTime = 38;
+            item.useTime = 40;
             item.useAnimation = 40;
             item.useStyle = 5;
             item.shoot = 3;
@@ -29,7 +29,7 @@ namespace TGEM.Items.Weapons.Ranged
             item.rare = 7;
             item.useSound = 5;
             item.autoReuse = true;
-            item.shootSpeed = 6.1f;
+            item.shootSpeed = 5.6f;
 
         }
 		
