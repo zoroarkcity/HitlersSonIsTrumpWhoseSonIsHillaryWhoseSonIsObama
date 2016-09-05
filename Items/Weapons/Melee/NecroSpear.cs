@@ -11,7 +11,7 @@ namespace TGEM.Items.Weapons.Melee
         public override void SetDefaults()
         {
             item.name = "Bone Lance";
-            item.damage = 12;
+            item.damage = 47;
             item.toolTip = "Impales the impurity.";
             item.melee = true;
             item.width = 52;
