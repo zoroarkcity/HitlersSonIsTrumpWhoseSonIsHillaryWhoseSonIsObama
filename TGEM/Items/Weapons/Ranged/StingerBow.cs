@@ -13,14 +13,14 @@ namespace TGEM.Items.Weapons.Ranged
         public override void SetDefaults()
         {
             item.name = "Stinger Bow";
-            item.damage = 20;
+            item.damage = 13;
             item.noMelee = true;
             item.ranged = true;
             item.width = 14;
             item.height = 21;
-            item.toolTip = "Transforms all arrows into stinger arrows";
-            item.useTime = 30;
-            item.useAnimation = 30;
+            item.toolTip = "Transforms all arrows into stinger arrows, fires like a shotgun";
+            item.useTime = 40;
+            item.useAnimation = 40;
             item.useStyle = 5;
             item.shoot = 3;
             item.useAmmo = 1;
@@ -32,11 +32,22 @@ namespace TGEM.Items.Weapons.Ranged
             item.shootSpeed = 6.1f;
 
         }
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
-        {
-            Projectile.NewProjectile(position.X, position.Y, speedX, speedY, mod.ProjectileType("StingerArrow"), damage, knockBack, player.whoAmI, 0f, 0f);
-            return false; //Makes sure to not fire the original projectile
-        }
+		
+			public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		{
+			int amountOfProjectiles = Main.rand.Next(3, 6);
+			for (int i = 0; i < amountOfProjectiles; ++i)
+			{
+				float sX = speedX;
+				float sY = speedY;
+				sX += (float)Main.rand.Next(-60, 61) * 0.05f;
+				sY += (float)Main.rand.Next(-60, 61) * 0.05f;
+				Projectile.NewProjectile(position.X, position.Y, sX, sY, mod.ProjectileType("StingerArrow"), damage, knockBack, player.whoAmI);
+			}
+			return false;
+		}
+		
+		
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
