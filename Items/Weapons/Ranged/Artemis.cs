@@ -60,6 +60,14 @@ namespace TGEM.Items.Weapons.Ranged
 			recipe.AddIngredient(null, "StingerBow", 1);
             recipe.SetResult(this);
             recipe.AddRecipe();
+			
+			new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.TendonBow, 1);
+            recipe.AddIngredient(ItemID.MoltenFury, 1);
+			recipe.AddIngredient(null, "YoichiBow", 1);
+			recipe.AddIngredient(null, "StingerBow", 1);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
     }
 }

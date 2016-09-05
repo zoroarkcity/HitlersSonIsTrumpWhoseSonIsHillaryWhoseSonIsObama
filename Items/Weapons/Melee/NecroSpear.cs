@@ -29,7 +29,7 @@ namespace TGEM.Items.Weapons.Melee
             item.value = Item.sellPrice(0, 1, 0, 0);
             item.rare = 3;
             item.shoot = mod.ProjectileType("NecroSpearP");  //put your Spear projectile name
-            item.shootSpeed = 10f;
+            item.shootSpeed = 7;
 
         }
 
