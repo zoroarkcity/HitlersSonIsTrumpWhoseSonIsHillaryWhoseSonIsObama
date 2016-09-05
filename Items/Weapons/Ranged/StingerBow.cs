@@ -13,13 +13,13 @@ namespace TGEM.Items.Weapons.Ranged
         public override void SetDefaults()
         {
             item.name = "Stinger Bow";
-            item.damage = 13;
+            item.damage = 17;
             item.noMelee = true;
             item.ranged = true;
             item.width = 14;
             item.height = 21;
             item.toolTip = "Transforms all arrows into stinger arrows, fires like a shotgun";
-            item.useTime = 40;
+            item.useTime = 38;
             item.useAnimation = 40;
             item.useStyle = 5;
             item.shoot = 3;
