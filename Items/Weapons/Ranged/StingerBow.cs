@@ -29,7 +29,7 @@ namespace TGEM.Items.Weapons.Ranged
             item.rare = 7;
             item.useSound = 5;
             item.autoReuse = true;
-            item.shootSpeed = 6.1f;
+            item.shootSpeed = 5f;
 
         }
 		
