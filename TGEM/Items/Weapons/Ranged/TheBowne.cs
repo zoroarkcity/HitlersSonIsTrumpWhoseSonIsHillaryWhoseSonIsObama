@@ -18,9 +18,9 @@ namespace TGEM.Items.Weapons.Ranged
             item.ranged = true;
             item.width = 9;
             item.height = 20;
-            item.toolTip = "Transforms Wooden arrows into Bone Arrows";
-            item.useTime = 30;
-            item.useAnimation = 30;
+            item.toolTip = "Transforms Wooden arrows into shadowflame necro arrows";
+            item.useTime = 15;
+            item.useAnimation = 15;
             item.useStyle = 5;
             item.shoot = 3;
             item.useAmmo = 1;
@@ -34,13 +34,15 @@ namespace TGEM.Items.Weapons.Ranged
         }
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ProjectileID.BoneArrow, damage, knockBack, player.whoAmI, 0f, 0f); //This is spawning a projectile of type FrostburnArrow using the original stats
+            Projectile.NewProjectile(position.X, position.Y, speedX, speedY, mod.ProjectileType("NecroArrow"), damage, knockBack, player.whoAmI, 0f, 0f); //This is spawning a projectile of type FrostburnArrow using the original stats
             return false; //Makes sure to not fire the original projectile
         }
+		
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Bone, 100);
+            recipe.AddIngredient(null, "NecroBar", 12);
+            recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
