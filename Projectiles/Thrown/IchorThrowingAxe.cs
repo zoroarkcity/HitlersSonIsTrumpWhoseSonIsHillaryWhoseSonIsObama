@@ -14,8 +14,8 @@ namespace TGEM.Projectiles.Thrown
         {
             projectile.CloneDefaults(ProjectileID.Shuriken);
             projectile.name = "Ichor Throwing Axe";
-            projectile.width = 15;       //projectile width
-            projectile.height = 16;
+            projectile.width = 30;       //projectile width
+            projectile.height = 32;
             projectile.penetrate = -1;
             aiType = ProjectileID.Shuriken;
             projectile.ignoreWater = true;
@@ -48,6 +48,7 @@ namespace TGEM.Projectiles.Thrown
             item.name = "Ichor Throwing Axe";
             item.rare = 4;
             item.shootSpeed = 15f;
+			item.autoReuse = true;
         }
 
         public override void AddRecipes()

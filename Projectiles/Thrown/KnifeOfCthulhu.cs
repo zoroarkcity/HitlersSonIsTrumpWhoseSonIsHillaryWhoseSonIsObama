@@ -15,8 +15,8 @@ namespace TGEM.Projectiles.Thrown
             projectile.CloneDefaults(ProjectileID.Shuriken);
             projectile.name = "Knife Of Cthulhu";
             projectile.penetrate = 3;
-            projectile.width = 11;       //projectile width
-            projectile.height = 18;
+            projectile.width = 22;       //projectile width
+            projectile.height = 34;
             aiType = 48;
             projectile.ignoreWater = true;
             projectile.timeLeft = 6000;
@@ -35,6 +35,7 @@ namespace TGEM.Projectiles.Thrown
                 item.name = "Knife Of Cthulhu";
                 item.rare = 4;
                 item.shootSpeed = 15f;
+				item.autoReuse = true;
         }
 
         public override void HoldItem(Player player)

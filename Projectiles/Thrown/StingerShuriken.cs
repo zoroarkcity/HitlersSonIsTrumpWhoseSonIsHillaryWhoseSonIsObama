@@ -48,6 +48,7 @@ namespace TGEM.Projectiles.Thrown
             item.name = "Sting Shuriken";
             item.rare = 4;
             item.shootSpeed = 15f;
+			item.autoReuse = true;
         }
 
         public override void AddRecipes()

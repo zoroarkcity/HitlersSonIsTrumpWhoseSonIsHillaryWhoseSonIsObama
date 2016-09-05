@@ -34,6 +34,7 @@ namespace TGEM.Projectiles.Thrown
                 item.name = "Blessed Kunai";
                 item.rare = 4;
                 item.shootSpeed = 10f;
+				item.autoReuse = true;
             }
 
             public override void AddRecipes()

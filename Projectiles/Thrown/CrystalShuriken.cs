@@ -14,8 +14,8 @@ namespace TGEM.Projectiles.Thrown
         {
             projectile.CloneDefaults(3);
             projectile.name = "Crystal Shuriken";
-            projectile.width = 11;       //projectile width
-            projectile.height = 11;
+            projectile.width = 22;       //projectile width
+            projectile.height = 22;
             projectile.penetrate = 2;
             aiType = 3;
             projectile.ignoreWater = true;
@@ -42,7 +42,8 @@ namespace TGEM.Projectiles.Thrown
                 item.shoot = mod.ProjectileType("CrystalShurikenP");
                 item.name = "Crystal Shuriken";
                 item.rare = 4;
-                item.shootSpeed = 25f;
+                item.shootSpeed = 15f;
+				item.autoReuse = true;
             }
 
             public override void AddRecipes()

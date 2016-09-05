@@ -14,8 +14,8 @@ namespace TGEM.Projectiles.Thrown
         {
             projectile.CloneDefaults(ProjectileID.Shuriken);
             projectile.name = "Cursed Knife";
-            projectile.width = 9;       //projectile width
-            projectile.height = 19;
+            projectile.width = 18;       //projectile width
+            projectile.height = 32;
             projectile.penetrate = -1;
             aiType = 48;
             projectile.ignoreWater = true;
@@ -48,6 +48,7 @@ namespace TGEM.Projectiles.Thrown
                 item.name = "Cursed Knife";
                 item.rare = 4;
                 item.shootSpeed = 16f;
+				item.autoReuse = true;
             }
 
             public override void AddRecipes()

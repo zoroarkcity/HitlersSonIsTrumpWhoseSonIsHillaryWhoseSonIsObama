@@ -13,7 +13,7 @@ namespace TGEM.Projectiles.Thrown
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.Shuriken);
-            projectile.name = "Explosive Shuriken";
+            projectile.name = "Hellstone Glaive";
             projectile.width = 22;       //projectile width
             projectile.height = 22;
             projectile.penetrate = 1;
@@ -45,9 +45,10 @@ namespace TGEM.Projectiles.Thrown
             item.CloneDefaults(ItemID.Shuriken);
             item.damage = 30;
             item.shoot = mod.ProjectileType("HellstoneGlaiveP");
-            item.name = "Explosive Shuriken";
+            item.name = "Hellstone Glaive";
             item.rare = 4;
             item.shootSpeed = 15f;
+			item.autoReuse = true;
         }
 
         public override void AddRecipes()
