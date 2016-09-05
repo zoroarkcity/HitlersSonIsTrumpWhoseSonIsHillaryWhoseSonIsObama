@@ -18,7 +18,7 @@ namespace TGEM.Projectiles.Minions
             projectile.netImportant = true;
             projectile.friendly = true;
             projectile.minionSlots = 1;
-            projectile.alpha = 75;
+            projectile.alpha = 0;
             projectile.aiStyle = 66;
             projectile.timeLeft = 18000;
             Main.projFrames[projectile.type] = 3;
