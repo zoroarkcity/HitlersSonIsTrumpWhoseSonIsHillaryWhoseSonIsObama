@@ -46,7 +46,7 @@ namespace TGEM.Projectiles.Thrown
             item.CloneDefaults(ItemID.Shuriken);
             item.damage = 22;
             item.shoot = mod.ProjectileType("HellstoneGlaiveP");
-            item.name = "Hellstone Glaive";
+            item.name = "Explosive Shuriken";
             item.rare = 4;
             item.shootSpeed = 15f;
 			item.autoReuse = true;

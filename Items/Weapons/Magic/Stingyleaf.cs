@@ -11,7 +11,7 @@ namespace TGEM.Items.Weapons.Magic
         public override void SetDefaults()
         {
             item.name = "Primal Wrath";
-            item.damage = 17;
+            item.damage = 20;
             item.magic = true;
             item.mana = 8;
             item.width = 38;
@@ -19,7 +19,7 @@ namespace TGEM.Items.Weapons.Magic
             item.toolTip = "Fires bursts of 4 inaccurate leaves";
             item.useTime = 4;
             item.useAnimation = 16;
-            item.reuseDelay = 14;
+            item.reuseDelay = 20;
             item.useStyle = 5;
             item.noMelee = true;
             item.knockBack = 7;
