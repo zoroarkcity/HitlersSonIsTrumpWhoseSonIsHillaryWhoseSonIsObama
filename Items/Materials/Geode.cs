@@ -11,7 +11,7 @@ namespace TGEM.Items.Materials
 			item.width = 32;
 			item.height = 32;
 			item.maxStack = 999;
-			AddTooltip("C");
+			AddTooltip("Contains many forms of gems");
 			item.value = 100;
 			item.rare = 1;
 		}

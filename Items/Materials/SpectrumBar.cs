@@ -22,7 +22,7 @@ namespace TGEM.Items.Materials
 
         public override DrawAnimation GetAnimation()
         {
-            return new DrawAnimationVertical(15, 7);   //2 is the sprite frame, change of how many frames your sprite have
+            return new DrawAnimationVertical(15, 7);
         }
 
         public override Color? GetAlpha(Color lightColor)

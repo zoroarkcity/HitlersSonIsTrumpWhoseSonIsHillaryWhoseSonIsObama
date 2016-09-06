@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace EnergyMod.Projectiles.Thrown {
+namespace TGEM.Projectiles.Thrown {
 public class FireGrenadeBoom : ModProjectile
 {
 	public override void SetDefaults()

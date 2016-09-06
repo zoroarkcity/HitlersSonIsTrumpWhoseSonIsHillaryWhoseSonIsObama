@@ -11,7 +11,7 @@ namespace TGEM.Items.Materials
 			item.width = 8;
 			item.height = 8;
 			item.maxStack = 999;
-			AddTooltip("The name doesn't even make sense for this...");
+			AddTooltip("For all your steampunk needs");
 			item.value = 100;
 			item.rare = 1;
 

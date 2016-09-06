@@ -30,7 +30,7 @@ namespace TGEM.Items.Weapons.Melee
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
             Projectile.NewProjectile(position.X, position.Y, speedX, speedY, 95, 50, knockBack, player.whoAmI, 0f, 0f); //This is spawning a projectile of type FrostburnArrow using the original stats
-            return false; //Makes sure to not fire the original projectile
+            return false; 
         }
     }
 }

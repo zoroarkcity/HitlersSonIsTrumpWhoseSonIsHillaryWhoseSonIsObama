@@ -16,7 +16,7 @@ namespace TGEM.Items.Weapons.Magic
             item.mana = 6;
             item.width = 13;
             item.height = 14;
-            item.toolTip = "Fires high-velocity bolts of energy!.";
+            item.toolTip = "Fires high-velocity bolts of energy!";
             item.useTime = 33;
             item.useAnimation = 33;
             item.useStyle = 5;

@@ -19,8 +19,8 @@ namespace TGEM.Items.Weapons.Magic
             item.useTime = 120;
             item.useAnimation = 120;
             item.useStyle = 5;
-            Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
-            item.noMelee = true; //so the item's animation doesn't do damage
+            Item.staff[item.type] = true; 
+            item.noMelee = true; 
             item.knockBack = 5;
             item.value = 2000000;
             item.rare = 9;

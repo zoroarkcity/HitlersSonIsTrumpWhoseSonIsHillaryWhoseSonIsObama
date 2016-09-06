@@ -10,7 +10,7 @@ namespace TGEM.Items.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            item.name = "MythrilStaff";
+            item.name = "Mythril Staff";
             item.damage = 46;
             item.magic = true;
             item.mana = 8;

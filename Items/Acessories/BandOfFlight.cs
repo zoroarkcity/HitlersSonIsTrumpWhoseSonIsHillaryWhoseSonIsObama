@@ -17,7 +17,8 @@ namespace TGEM.Items.Acessories
             item.rare = 2;
             item.accessory = true;
         }
-        //these wings use the same values as the solar wings
+
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.wingTimeMax = (int)(player.wingTimeMax * 1.5);
