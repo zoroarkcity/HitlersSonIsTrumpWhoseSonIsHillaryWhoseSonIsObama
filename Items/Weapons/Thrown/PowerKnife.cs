@@ -11,7 +11,7 @@ public class PowerKnife : ModItem
     public override void SetDefaults()
     {
         item.name = "Power Knife";
-        item.damage = 13;
+        item.damage = 12;
         item.thrown = true;
 		item.noMelee = true;
 		item.noUseGraphic = true;
