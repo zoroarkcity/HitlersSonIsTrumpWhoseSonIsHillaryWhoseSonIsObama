@@ -43,18 +43,15 @@ namespace TGEM.Items.Weapons.Magic
 
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            float spread = 45f * 0.0174f;
-            float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
-            double startAngle = Math.Atan2(speedX, speedY) - spread / 2;
-            double deltaAngle = spread / 8f;
-            double offsetAngle;
-            int i;
-            for (i = 0; i < 3; i++)
-            {
-                offsetAngle = startAngle + deltaAngle * i;
-                Terraria.Projectile.NewProjectile(position.X, position.Y, baseSpeed * (float)Math.Sin(offsetAngle), baseSpeed * (float)Math.Cos(offsetAngle), item.shoot, damage, knockBack, item.owner);
-            }
-            return false;
+            //create velocity vectors for the two angled projectiles (outwards at PI/15 radians)
+            Vector2 origVect = new Vector2(speedX, speedY);
+            Vector2 newVect = origVect.RotatedBy(System.Math.PI / 20);
+            Vector2 newVect2 = origVect.RotatedBy(-System.Math.PI / 20);
+
+            Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, player.whoAmI, 0, 0);
+            Projectile.NewProjectile(position.X, position.Y, newVect.X, newVect.Y, type, damage, knockBack, player.whoAmI, 0, 0);
+            Projectile.NewProjectile(position.X, position.Y, newVect2.X, newVect2.Y, type, damage, knockBack, player.whoAmI, 0, 0);
+			return false;
         }
 	}
 }

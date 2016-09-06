@@ -14,7 +14,7 @@ namespace TGEM.Projectiles.Thrown
         {
             projectile.CloneDefaults(ProjectileID.Shuriken);
             projectile.name = "Hellstone Glaive";
-            projectile.width = 22;       //projectile width
+            projectile.width = 22;
             projectile.height = 22;
             projectile.penetrate = 2;
             aiType = ProjectileID.Shuriken;
@@ -25,7 +25,7 @@ namespace TGEM.Projectiles.Thrown
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
                 target.AddBuff(24, 180, false);
-			Projectile.NewProjectile(projectile.position.X, projectile.position.Y, 0f, 0f, mod.ProjectileType("HellstoneGlaiveBoom"), projectile.damage, 0f, projectile.owner, 0f, 0f);
+			Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, mod.ProjectileType("HellstoneGlaiveBoom"), projectile.damage, 0f, projectile.owner, 0f, 0f);
         }
 
         public override void OnHitPvp(Player target, int damage, bool crit)
@@ -44,14 +44,12 @@ namespace TGEM.Projectiles.Thrown
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.Shuriken);
-            item.damage = 30;
+            item.damage = 22;
             item.shoot = mod.ProjectileType("HellstoneGlaiveP");
             item.name = "Hellstone Glaive";
             item.rare = 4;
             item.shootSpeed = 15f;
 			item.autoReuse = true;
-			item.useTime = 25;
-			item.useAnimation = 25;
         }
 
         public override void AddRecipes()
@@ -69,8 +67,8 @@ namespace TGEM.Projectiles.Thrown
 		public override void SetDefaults()
 		{
 			projectile.name = "Hellstone Glaive";
-			projectile.width = 55;
-			projectile.height = 55;
+			projectile.width = 100;
+			projectile.height = 100;
 			projectile.aiStyle = 2;
 			projectile.penetrate = -1;
 			projectile.thrown = true;
