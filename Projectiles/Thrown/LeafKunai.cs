@@ -14,7 +14,7 @@ namespace TGEM.Projectiles.Thrown
         {
             projectile.CloneDefaults(ProjectileID.Shuriken);
             projectile.name = "Leaf Kunai";
-            projectile.width = 14;       //projectile width
+            projectile.width = 14;     
             projectile.height = 22;
             projectile.penetrate = -1;
             aiType = 48;
