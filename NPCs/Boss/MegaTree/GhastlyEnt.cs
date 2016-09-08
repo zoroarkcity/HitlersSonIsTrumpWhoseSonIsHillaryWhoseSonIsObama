@@ -137,15 +137,15 @@ namespace TGEM.NPCs.Boss.MegaTree
 				}
 				
 				shootTimer++;
-				if (shootTimer == 70)
+				if (shootTimer == 60)
 				{
 				Vector2 direction = Main.player[npc.target].Center - npc.Center;
 				direction.Normalize();
-				Vector2 newVect = direction.RotatedBy(System.Math.PI / 15);
-				Vector2 newVect2 = direction.RotatedBy(-System.Math.PI / 15);
-				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, direction.X * 10f, direction.Y * 10f, mod.ProjectileType("ForestEnergy"), 20, 1, Main.myPlayer, 0, 0);
-				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, newVect.X * 10f, newVect.Y * 10f, mod.ProjectileType("ForestEnergy"), 20, 1, Main.myPlayer, 0, 0);
-				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, newVect2.X * 10f, newVect2.Y * 10f, mod.ProjectileType("ForestEnergy"), 20, 1, Main.myPlayer, 0, 0);
+				Vector2 newVect = direction.RotatedBy(System.Math.PI / 13);
+				Vector2 newVect2 = direction.RotatedBy(-System.Math.PI / 13);
+				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, direction.X * 10f, direction.Y * 10f, mod.ProjectileType("ForestEnergy"), 15, 1, Main.myPlayer, 0, 0);
+				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, newVect.X * 10f, newVect.Y * 10f, mod.ProjectileType("ForestEnergy"), 15, 1, Main.myPlayer, 0, 0);
+				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, newVect2.X * 10f, newVect2.Y * 10f, mod.ProjectileType("ForestEnergy"), 15, 1, Main.myPlayer, 0, 0);
 				shootTimer = 0;
 				}
 			}
