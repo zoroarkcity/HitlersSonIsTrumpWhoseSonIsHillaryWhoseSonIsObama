@@ -28,13 +28,27 @@ namespace TGEM.Projectiles.Thrown
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.Shuriken);
-            item.damage = 65;
+            item.damage = 30;
             item.shoot = mod.ProjectileType("LeafKunaiP");
             item.name = "Leaf Kunai";
             item.rare = 4;
-            item.shootSpeed = 16f;
+            item.shootSpeed = 10f;
             item.autoReuse = true;
         }
-    }
+
+        public override void HoldItem(Player player)
+        {
+            if (!Main.dayTime == false)
+            {
+                item.damage = 60;
+                item.shootSpeed = 20f;
+            }
+
+            if (!Main.dayTime == true)
+            {
+                item.damage = 30;
+                item.shootSpeed = 10f;
+            }
+        } }
 }
  
