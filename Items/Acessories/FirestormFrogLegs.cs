@@ -21,7 +21,7 @@ namespace TGEM.Items.Acessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             ((EnergyPlayer)player.GetModPlayer(mod, "EnergyPlayer")).firestorm = true;
-            player.jumpSpeedBoost = 2f;
+            player.jumpSpeedBoost += 3.5f;
             player.noFallDmg = true;
             player.fireWalk = true;
             player.autoJump = true;
@@ -29,12 +29,13 @@ namespace TGEM.Items.Acessories
 
         public override void AddRecipes()
         {
-            ModRecipe modRecipe = new ModRecipe(mod);
-            modRecipe.AddIngredient(396, 1);
-            modRecipe.AddIngredient(ItemID.FrogLeg, 1);
-            modRecipe.AddTile(TileID.TinkerersWorkbench);
-            modRecipe.SetResult(this, 1);
-            modRecipe.AddRecipe();
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(396, 1);
+            recipe.AddIngredient(ItemID.FrogLeg, 1);
+            recipe.AddIngredient(null, "FirestormBottle", 1);
+            recipe.AddTile(TileID.TinkerersWorkbench);
+            recipe.SetResult(this, 1);
+            recipe.AddRecipe();
         }
     }
 }
