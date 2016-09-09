@@ -21,7 +21,7 @@ namespace TGEM.Items.Acessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             ((EnergyPlayer)player.GetModPlayer(mod, "EnergyPlayer")).firestorm = true;
-            player.jumpSpeedBoost += 3.5f;
+            player.jumpSpeedBoost += 2.8f;
             player.noFallDmg = true;
             player.fireWalk = true;
             player.autoJump = true;
