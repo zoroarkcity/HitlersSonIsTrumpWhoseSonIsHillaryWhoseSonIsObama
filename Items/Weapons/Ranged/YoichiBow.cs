@@ -34,7 +34,7 @@ namespace TGEM.Items.Weapons.Ranged
         }
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-			if (Main.rand.Next(5) == 0)
+			if (Main.rand.Next(3) == 0)
 			{
 				Vector2 origVect = new Vector2(speedX, speedY);
 				Vector2 newVect = origVect.RotatedBy(System.Math.PI / 15);
@@ -42,10 +42,18 @@ namespace TGEM.Items.Weapons.Ranged
 				Vector2 newVect3 = origVect.RotatedBy(System.Math.PI / 20);
 				Vector2 newVect4 = origVect.RotatedBy(-System.Math.PI / 20);
 
-				Projectile.NewProjectile(position.X, position.Y, newVect.X * 2f, newVect.Y * 2f, 27, damage, knockBack, player.whoAmI, 0, 0);
-				Projectile.NewProjectile(position.X, position.Y, newVect2.X * 2f, newVect2.Y * 2f, 27, damage, knockBack, player.whoAmI, 0, 0);
-				Projectile.NewProjectile(position.X, position.Y, newVect3.X * 2f, newVect3.Y * 2f, 27, damage, knockBack, player.whoAmI, 0, 0);
-				Projectile.NewProjectile(position.X, position.Y, newVect4.X * 2f, newVect4.Y * 2f, 27, damage, knockBack, player.whoAmI, 0, 0);
+				int p = Projectile.NewProjectile(position.X, position.Y, newVect.X * 2f, newVect.Y * 2f, 27, damage / 2, knockBack, player.whoAmI, 0, 0);
+				Main.projectile[p].penetrate = 1;
+				Main.projectile[p].extraUpdates = 2;
+				int p2 = Projectile.NewProjectile(position.X, position.Y, newVect2.X * 2f, newVect2.Y * 2f, 27, damage / 2, knockBack, player.whoAmI, 0, 0);
+				Main.projectile[p2].penetrate = 1;
+				Main.projectile[p2].extraUpdates = 2;
+				int p3 = Projectile.NewProjectile(position.X, position.Y, newVect3.X * 2f, newVect3.Y * 2f, 27, damage / 2, knockBack, player.whoAmI, 0, 0);
+				Main.projectile[p3].penetrate = 1;
+				Main.projectile[p3].extraUpdates = 2;
+				int p4 = Projectile.NewProjectile(position.X, position.Y, newVect4.X * 2f, newVect4.Y * 2f, 27, damage / 2, knockBack, player.whoAmI, 0, 0);
+				Main.projectile[p4].penetrate = 1;
+				Main.projectile[p4].extraUpdates = 2;
 			}
             return true;
         }
