@@ -21,14 +21,4 @@ public class BloodHeart : ModItem
 	{
         ((EnergyPlayer)player.GetModPlayer(mod, "EnergyPlayer")).lifesteal = true;
 	}
-
-    public override void AddRecipes()
-    {
-        ModRecipe recipe = new ModRecipe(mod);
-        recipe.AddIngredient(null, "LivingTwig");
-        recipe.AddIngredient(null, "ManaStar");
-        recipe.AddTile(114);
-        recipe.SetResult(this);
-        recipe.AddRecipe();
-    }
 }}

@@ -25,7 +25,6 @@ namespace TGEM.Items.Weapons.Magic
             item.value = 10000;
             Item.staff[item.type] = true;
             item.rare = 2;
-            item.useSound = 14;
             item.autoReuse = true;
             item.shoot = (123);
             item.shootSpeed = 25f;
