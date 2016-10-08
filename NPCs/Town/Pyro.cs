@@ -11,7 +11,7 @@ namespace TGEM.NPCs.Town
 		public override bool Autoload(ref string name, ref string texture, ref string[] altTextures)
 		{
 			name = "Pyro";
-			altTextures = new string[] { "EnergyMod/NPCs/Town/Pyro"};
+			altTextures = new string[] { "TGEM/NPCs/Town/Pyro"};
 			return mod.Properties.Autoload;
 		}
 		public override void SetDefaults()
