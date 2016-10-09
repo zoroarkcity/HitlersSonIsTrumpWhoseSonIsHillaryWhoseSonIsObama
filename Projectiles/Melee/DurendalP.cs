@@ -12,8 +12,8 @@ namespace TGEM.Projectiles.Melee
         public override void SetDefaults()
         {
             projectile.name = "Durendal Beam";  //projectile name
-            projectile.width = 23;       //projectile width
-            projectile.height = 23;  //projectile height
+            projectile.width = 50;       //projectile width
+            projectile.height = 50;  //projectile height
             projectile.friendly = true;      //make that the projectile will not damage you
             projectile.melee = true;         // 
             projectile.tileCollide = true;   //make that the projectile will be destroed if it hits the terrain
