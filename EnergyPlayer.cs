@@ -26,7 +26,7 @@ namespace TGEM
 
             public override void OnHitAnything(float x, float y, Entity victim)
             {
-                if (Main.rand.Next(15) == 0 && lifesteal == true)
+                if (Main.rand.Next(6) == 0 && lifesteal == true)
                 {
                     player.HealEffect(1);
                     player.statLife += 1;

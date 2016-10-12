@@ -20,7 +20,7 @@ public class VampireNecklace : ModItem
     public override void UpdateAccessory(Player player, bool hideVisual)
 	{
         ((EnergyPlayer)player.GetModPlayer(mod, "EnergyPlayer")).lifesteal = true;
-		player.armorPenetration += 5;
+		player.armorPenetration += 8;
 	}
 
     public override void AddRecipes()

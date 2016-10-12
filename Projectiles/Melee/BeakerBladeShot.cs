@@ -24,11 +24,11 @@ namespace TGEM.Projectiles.Melee
             projectile.ignoreWater = true;
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit) //DEBUFFS BOI
         {
             if (Main.rand.Next(3) == 0)
             {
-                target.AddBuff(24, 180, false);
+                target.AddBuff(24, 180, false); 
             }
             if (Main.rand.Next(3) == 1)
             {
