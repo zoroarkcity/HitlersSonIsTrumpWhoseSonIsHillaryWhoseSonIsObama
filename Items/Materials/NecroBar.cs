@@ -20,12 +20,10 @@ namespace TGEM.Items.Materials
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(154, 4);
-            recipe.AddIngredient(150, 20);
-            recipe.AddIngredient(175, 1);
-            recipe.AddIngredient(null, "CursedEssence", 1);
+            recipe.AddIngredient(ItemID.Bone, 3);
+            recipe.AddIngredient(521, 1);
             recipe.AddTile(26);
-            recipe.SetResult(this, 1);
+            recipe.SetResult(this, 2);
             recipe.AddRecipe();
         }
     }
