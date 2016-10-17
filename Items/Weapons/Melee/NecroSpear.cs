@@ -24,7 +24,6 @@ namespace TGEM.Items.Weapons.Melee
             item.useSound = 1;
             item.noMelee = true;
             item.noUseGraphic = true;
-            item.useTurn = true;
             item.useStyle = 5;
             item.value = Item.sellPrice(0, 1, 0, 0);
             item.rare = 3;
