@@ -10,7 +10,7 @@ namespace TGEM.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Forest Essence";
+			item.name = "Ancient Foliage";
 			item.width = 10;
 			item.height = 10;
 			item.noMelee = true; 

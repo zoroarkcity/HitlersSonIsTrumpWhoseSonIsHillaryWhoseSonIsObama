@@ -8,7 +8,7 @@ public class ForestEnergy : ModProjectile
 {
 	public override void SetDefaults()
 	{
-		projectile.name = "Forest Energy";
+		projectile.name = "Forest Blast";
 		projectile.width = 20;
 		projectile.height = 20;
 		projectile.aiStyle = 0;
@@ -17,7 +17,6 @@ public class ForestEnergy : ModProjectile
         projectile.friendly = false;
 		projectile.alpha = 100;
 		projectile.scale = 1.5f;
-		projectile.tileCollide = false;
 	}
 	public override bool PreAI()
 {

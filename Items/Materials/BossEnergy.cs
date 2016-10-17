@@ -10,7 +10,7 @@ namespace TGEM.Items.Materials
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Boss Essence";
+			item.name = "Empowered Essence";
 			item.width = 10;
 			item.height = 10;
 			item.noMelee = true; 

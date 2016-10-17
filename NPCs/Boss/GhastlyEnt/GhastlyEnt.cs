@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace TGEM.NPCs.Boss.MegaTree
+namespace TGEM.NPCs.Boss.GhastlyEnt
 {
     public class GhastlyEnt : ModNPC
     {
@@ -19,7 +19,7 @@ namespace TGEM.NPCs.Boss.MegaTree
             npc.displayName = "Ghastly Ent";
             npc.aiStyle = -1;
             npc.lifeMax = 3500;
-            npc.damage = 40;
+            npc.damage = 25;
             npc.defense = 15;
             npc.knockBackResist = 0f;
             npc.width = 75;
@@ -51,8 +51,6 @@ namespace TGEM.NPCs.Boss.MegaTree
 			timer++;
 			
 			
-			if (!Main.expertMode || npc.life >= 3000)
-			{
 				if (timer == 3 || timer == 100 || timer == 200 || timer == 300 || timer == 400 || timer == 500)
 				{
 					npc.alpha = 0;
@@ -60,8 +58,8 @@ namespace TGEM.NPCs.Boss.MegaTree
 					moveSpeedY = 0;
 					Vector2 direction = Main.player[npc.target].Center - npc.Center;
 					direction.Normalize();
-					npc.velocity.Y = direction.Y * 10f;
-					npc.velocity.X = direction.X * 10f;
+					npc.velocity.Y = direction.Y * 9f;
+					npc.velocity.X = direction.X * 9f;
 				}
 			
 				if (timer == 75 || timer == 175 || timer == 275 || timer == 375 || timer == 475)
@@ -71,28 +69,6 @@ namespace TGEM.NPCs.Boss.MegaTree
 					npc.velocity.Y = direction.Y * 1f;
 					npc.velocity.X = direction.X * 1f;
 				}
-			}
-			else
-			{
-				if (timer == 3 || timer == 50 || timer == 100 || timer == 150 || timer == 200 || timer == 250 || timer == 300 || timer == 350 || timer == 400 || timer == 450 || timer == 500 || timer == 550)
-				{
-					npc.alpha = 150;
-					moveSpeed = 0;
-					moveSpeedY = 0;
-					Vector2 direction = Main.player[npc.target].Center - npc.Center;
-					direction.Normalize();
-					npc.velocity.Y = direction.Y * 13f;
-					npc.velocity.X = direction.X * 13f;
-				}
-			
-				if (timer == 40 || timer == 90 || timer == 140 || timer == 190 || timer == 240 || timer == 290 || timer == 340 || timer == 390 || timer == 440 || timer == 490 || timer == 540)
-				{
-					Vector2 direction = Main.player[npc.target].Center - npc.Center;
-					direction.Normalize();
-					npc.velocity.Y = direction.Y * 1f;
-					npc.velocity.X = direction.X * 1f;
-				}
-			}
 			
 			
 			
@@ -108,14 +84,7 @@ namespace TGEM.NPCs.Boss.MegaTree
 					moveSpeed++;
 				}
 				
-				if (!Main.expertMode || npc.life >= 3000) //Moves faster on expert
-				{
 					npc.velocity.X = moveSpeed * 0.2f;
-				}
-				else
-				{
-					npc.velocity.X = moveSpeed * 0.25f;	
-				}
 				
 				if (npc.Center.Y >= player.Center.Y - 350f && moveSpeedY >= -35) //Flies to players Y position
 				{
@@ -127,25 +96,16 @@ namespace TGEM.NPCs.Boss.MegaTree
 					moveSpeedY++;
 				}
 				
-				if (!Main.expertMode || npc.life >= 3000) //Moves faster on expert
-				{
+
 					npc.velocity.Y = moveSpeedY * 0.1f;
-				}
-				else
-				{
-					npc.velocity.Y = moveSpeedY * 0.13f;
-				}
+
 				
 				shootTimer++;
-				if (shootTimer == 60)
+				if (shootTimer == 50)
 				{
 				Vector2 direction = Main.player[npc.target].Center - npc.Center;
 				direction.Normalize();
-				Vector2 newVect = direction.RotatedBy(System.Math.PI / 13);
-				Vector2 newVect2 = direction.RotatedBy(-System.Math.PI / 13);
-				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, direction.X * 10f, direction.Y * 10f, mod.ProjectileType("ForestEnergy"), 15, 1, Main.myPlayer, 0, 0);
-				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, newVect.X * 10f, newVect.Y * 10f, mod.ProjectileType("ForestEnergy"), 15, 1, Main.myPlayer, 0, 0);
-				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, newVect2.X * 10f, newVect2.Y * 10f, mod.ProjectileType("ForestEnergy"), 15, 1, Main.myPlayer, 0, 0);
+				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, direction.X * 10f, direction.Y * 10f, mod.ProjectileType("ForestEnergy"), 12, 1, Main.myPlayer, 0, 0);
 				shootTimer = 0;
 				}
 			}
@@ -168,7 +128,7 @@ namespace TGEM.NPCs.Boss.MegaTree
 				shootTimerB++;
 				
 				
-				if (shootTimerB == 30)
+				if (shootTimerB == 80)
 					{
 						for (int i = 0; i < 50; ++i)
 						{
@@ -176,13 +136,20 @@ namespace TGEM.NPCs.Boss.MegaTree
 						Main.dust[dust].scale = 1.5f;
 						}
 						int A = Main.rand.Next(-250, 250) * 3;
-						int B = Main.rand.Next(-100, 100) - 500;
+						int B = Main.rand.Next(-100, 100) - 400;
 						npc.position.X = player.Center.X + A;
 						npc.position.Y = player.Center.Y + B;
-						Vector2 direction = Main.player[npc.target].Center - npc.Center;
-						direction.Normalize();
-						Projectile.NewProjectile(npc.Center.X, npc.Center.Y, direction.X * 15f, direction.Y * 15f, mod.ProjectileType("ForestEnergy"), 20, 1, Main.myPlayer, 0, 0);
 						shootTimerB = 0;
+						for (int i = 0; i < 3; ++i)
+						{
+							Vector2 direction = Main.player[npc.target].Center - npc.Center;
+							direction.Normalize();
+							float sX = direction.X * 6.5f;
+							float sY = direction.Y * 6.5f;
+							sX += (float)Main.rand.Next(-60, 61) * 0.05f;
+							sY += (float)Main.rand.Next(-60, 61) * 0.05f;
+							Projectile.NewProjectile(npc.Center.X, npc.Center.Y, sX, sY, mod.ProjectileType("Leafnado"), 12, 1, Main.myPlayer, 0, 0);
+						}
 					}
 					
 					if (timer == 2300) // this is where timer resets on expert mode

@@ -24,14 +24,14 @@ namespace TGEM.Items.Materials
             recipe.AddIngredient(38, 2);
             recipe.AddIngredient(null, "WideLens", 1);
             recipe.AddTile(26);
-            recipe.SetResult(this, 1);
+            recipe.SetResult(this, 5);
             recipe.AddRecipe();
             recipe = new ModRecipe(mod);
             recipe.AddIngredient(1257, 5);
-            recipe.AddIngredient(38, 5);
+            recipe.AddIngredient(38, 2);
             recipe.AddIngredient(null, "WideLens", 1);
             recipe.AddTile(26);
-            recipe.SetResult(this, 2);
+            recipe.SetResult(this, 5);
             recipe.AddRecipe();
         }
     }
