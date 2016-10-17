@@ -28,12 +28,7 @@ namespace TGEM.Items.Boss
 		{
 			int amountToDrop = Main.rand.Next(20,30);
 			player.QuickSpawnItem(mod.ItemType("ForestEnergy"), amountToDrop);
-                player.QuickSpawnItem(mod.ItemType("TreeStaff"), 1);
-				
-				if (Main.rand.Next(4) == 0)
-            {
-                player.QuickSpawnItem(mod.ItemType("MegaTreeMask"), 1);
-            }
+            player.QuickSpawnItem(mod.ItemType("TreeStaff"), 1);
 		}
 	}
 }
