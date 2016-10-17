@@ -23,12 +23,12 @@ public override void SetDefaults()
 	
 	public override bool CanUseItem(Player player)
 	{
-		return !NPC.AnyNPCs(mod.NPCType("MegaTree"));
+		return !NPC.AnyNPCs(mod.NPCType("GhastlyEnt"));
 	}
 	
 	public override bool UseItem(Player player)
     {
-        NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("MegaTree"));
+        NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("GhastlyEnt"));
         Main.PlaySound(15, (int)player.position.X, (int)player.position.Y, 0);
         return true;
     }
@@ -38,7 +38,7 @@ public override void SetDefaults()
         ModRecipe recipe = new ModRecipe(mod);
         recipe.AddIngredient(ItemID.Ebonwood, 20);
 		recipe.AddIngredient(ItemID.Wood, 20);
-		recipe.AddIngredient(ItemID.ShadowScale, 15);
+		recipe.AddIngredient(ItemID.CrimtaneBar, 5);
 		recipe.AddTile(18);
         recipe.SetResult(this);
         recipe.AddRecipe();
@@ -46,7 +46,7 @@ public override void SetDefaults()
 		recipe = new ModRecipe(mod);
         recipe.AddIngredient(ItemID.Shadewood, 20);
 		recipe.AddIngredient(ItemID.Wood, 20);
-		recipe.AddIngredient(ItemID.TissueSample, 15);
+		recipe.AddIngredient(ItemID.DemoniteBar, 5);
 		recipe.AddTile(18);
         recipe.SetResult(this);
         recipe.AddRecipe();

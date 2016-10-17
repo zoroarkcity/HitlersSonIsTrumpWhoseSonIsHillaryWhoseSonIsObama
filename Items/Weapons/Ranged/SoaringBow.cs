@@ -24,7 +24,6 @@ public class SoaringBow : ModItem
         item.autoReuse = true;
 		item.shoot = ProjectileID.WoodenArrowFriendly;
 		item.shootSpeed = 12f;
-		item.scale = 1.1f;
 		item.noMelee = true;
 		item.useAmmo = ProjectileID.WoodenArrowFriendly;
     }
