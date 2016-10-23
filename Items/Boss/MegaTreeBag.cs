@@ -16,7 +16,7 @@ namespace TGEM.Items.Boss
 			item.height = 24;
 			item.toolTip = "Right click to open";
 			item.expert = true;
-			bossBagNPC = mod.NPCType("MegaTree");
+			bossBagNPC = mod.NPCType("GhastlyEnt");
 		}
 
 		public override bool CanRightClick()

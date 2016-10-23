@@ -4,22 +4,21 @@ using Terraria;
 using Terraria.ModLoader;
 
 namespace TGEM.Projectiles.Boss {
-public class Leafnado : ModProjectile
+public class Air : ModProjectile
 {
 	public override void SetDefaults()
 	{
-		projectile.name = "Leafnado";
-		projectile.width = 20;
-		projectile.height = 20;
+		projectile.name = "Spit Air";
+		projectile.width = 16;
+		projectile.height = 16;
 		projectile.aiStyle = 0;
 		projectile.penetrate = 5;
 		projectile.hostile = true;
         projectile.friendly = false;
-		projectile.scale = 1f;
+		projectile.scale = 1.1f;
 		projectile.tileCollide = false;
-		Main.projFrames[projectile.type] = 6;
+		Main.projFrames[projectile.type] = 4;
 	}
-	
 	
 			public override void AI()
         {
@@ -29,6 +28,11 @@ public class Leafnado : ModProjectile
                 projectile.frameCounter = 0;
                 projectile.frame = (projectile.frame + 1) % 4;
             } 
+			
+			if (Main.rand.Next(10) == 0)
+		{
+			Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, 64, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
+		}
 		}
 }
 }	

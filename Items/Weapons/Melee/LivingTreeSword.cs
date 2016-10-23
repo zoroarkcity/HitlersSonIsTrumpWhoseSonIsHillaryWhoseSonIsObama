@@ -9,12 +9,12 @@ public class LivingTreeSword : ModItem
     public override void SetDefaults()
     {
 		item.name = "Living Tree Sword";
-        item.damage = 55;
+        item.damage = 30;
         item.melee = true;
         item.width = 22;
         item.height = 24;
-        item.useTime = 60;
-        item.useAnimation = 60;
+        item.useTime = 40;
+        item.useAnimation = 40;
         item.useStyle = 1;
         item.knockBack = 3;
         item.value = 10000;
@@ -22,7 +22,6 @@ public class LivingTreeSword : ModItem
         item.useSound = 1;
         item.autoReuse = true;
 		item.toolTip = "Swings Slow, but hits heavily";
-		item.scale = 1.3f;
         item.useTurn = true;
         }
 	

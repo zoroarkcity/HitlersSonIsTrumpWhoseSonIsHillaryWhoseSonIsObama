@@ -14,31 +14,32 @@ public class Woodchipper : ModItem
         item.ranged = true;
         item.width = 22;
         item.height = 24;
-        item.useTime = 15;
-        item.useAnimation = 20;
-		item.useSound = 22;
+        item.useTime = 34;
+        item.useAnimation = 34;
+		item.useSound = 36;
         item.useStyle = 5;
         item.knockBack = 3;
         item.value = 10000;
         item.rare = 1;
         item.autoReuse = true;
-		item.toolTip = "Shoots tiny pieces of wood";
-        item.shoot = mod.ProjectileType("Woodchip");
-        item.shootSpeed = 10f;
+		item.toolTip = "Fires a bullet along with woodchips";
+        item.shoot = 10; 
+		item.shootSpeed = 7f;
+		item.useAmmo = ProjectileID.Bullet;
     }
 
     public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
     {
-        int amountOfProjectiles = 2;
+        int amountOfProjectiles = 3;
         for (int i = 0; i < amountOfProjectiles; ++i)
         {
             float sX = speedX;
             float sY = speedY;
-            sX += (float)Main.rand.Next(-60, 61) * 0.02f;
-            sY += (float)Main.rand.Next(-60, 61) * 0.02f;
-            Projectile.NewProjectile(position.X, position.Y, sX, sY, type, damage, knockBack, player.whoAmI);
+            sX += (float)Main.rand.Next(-60, 61) * 0.03f;
+            sY += (float)Main.rand.Next(-60, 61) * 0.03f;
+            Projectile.NewProjectile(position.X, position.Y, sX, sY, mod.ProjectileType("Woodchip"), damage, knockBack, player.whoAmI);
         }
-        return false;
+        return true;
     }
 	
 	public override void AddRecipes()

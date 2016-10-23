@@ -10,7 +10,7 @@ namespace TGEM.Items.Weapons.Summon
 		public override void SetDefaults()
 		{
 			item.name = "Tree Staff";
-			item.damage = 17;
+			item.damage = 9;
 			item.summon = true;
 			item.mana = 10;
 			item.width = 26;

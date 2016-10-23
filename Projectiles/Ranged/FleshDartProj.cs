@@ -21,12 +21,12 @@ namespace TGEM.Projectiles.Ranged {
 	
 	   public override void Kill(int timeLeft)
 		{
-			int amountOfProjectiles = Main.rand.Next(1, 5);
+			int amountOfProjectiles = Main.rand.Next(3, 5);
 			
 			for (int i = 0; i < amountOfProjectiles; ++i)
 				{
-					float sX = (float)Main.rand.Next(-60, 61) * 0.2f;
-					float sY = (float)Main.rand.Next(-60, 61) * 0.2f;
+					float sX = (float)Main.rand.Next(-60, 61) * 0.3f;
+					float sY = (float)Main.rand.Next(-60, 61) * 0.3f;
 					Projectile.NewProjectile(projectile.position.X, projectile.position.Y, sX, sY, mod.ProjectileType("FleshBlood"), projectile.damage / 2, 5f, projectile.owner);
 				}
 			}

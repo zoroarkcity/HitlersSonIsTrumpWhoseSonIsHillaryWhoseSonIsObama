@@ -21,7 +21,7 @@ public class ForestEnergy : ModProjectile
 	public override bool PreAI()
 {
     projectile.rotation += 0.05f;
-	 Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, 61, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
+	 Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, 34, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
     return true;
 }
 }

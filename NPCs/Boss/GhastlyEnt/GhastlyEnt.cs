@@ -13,12 +13,17 @@ namespace TGEM.NPCs.Boss.GhastlyEnt
 		int moveSpeedY = 0;
 		int shootTimer = 0;
 		int shootTimerB = 0;
+		int shootTimerC = 0;
+		int moveSpeedx2 = 0;
+		int moveSpeedy2 = 0;
+		int appleTimer = 0;
+		
         public override void SetDefaults()
         {
             npc.name = "Ghastly Ent";
             npc.displayName = "Ghastly Ent";
             npc.aiStyle = -1;
-            npc.lifeMax = 3500;
+            npc.lifeMax = 2700;
             npc.damage = 25;
             npc.defense = 15;
             npc.knockBackResist = 0f;
@@ -31,7 +36,7 @@ namespace TGEM.NPCs.Boss.GhastlyEnt
             npc.noGravity = true;
             npc.soundHit = 7;
             npc.soundKilled = 3;
-            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/MegaTree");
+            music = 12;
 			Main.npcFrameCount[npc.type] = 5;
 			npc.scale = 1.25f;
 			npc.npcSlots = 5;
@@ -42,12 +47,6 @@ namespace TGEM.NPCs.Boss.GhastlyEnt
 			npc.TargetClosest(true);
 			npc.spriteDirection = npc.direction;
             Player player = Main.player[npc.target];
-            if (!player.active || player.dead)
-            {
-                npc.TargetClosest(false);
-                npc.velocity.Y = -20;
-				timer = 0;
-            }
 			timer++;
 			
 			
@@ -68,6 +67,7 @@ namespace TGEM.NPCs.Boss.GhastlyEnt
 					direction.Normalize();
 					npc.velocity.Y = direction.Y * 1f;
 					npc.velocity.X = direction.X * 1f;
+					
 				}
 			
 			
@@ -105,25 +105,16 @@ namespace TGEM.NPCs.Boss.GhastlyEnt
 				{
 				Vector2 direction = Main.player[npc.target].Center - npc.Center;
 				direction.Normalize();
-				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, direction.X * 10f, direction.Y * 10f, mod.ProjectileType("ForestEnergy"), 12, 1, Main.myPlayer, 0, 0);
+				Projectile.NewProjectile(npc.Center.X, npc.Center.Y, direction.X * 12f, direction.Y * 12f, mod.ProjectileType("SapBall"), 12, 1, Main.myPlayer, 0, 0);
 				shootTimer = 0;
 				}
 			}
 			
-			if (timer >= 1500 && !Main.expertMode) //Goes back to phase 1 if not expert
-				{
-					timer = 0;
-				}
 				
-			if (timer >= 1500 && Main.expertMode) //Phase 3 expert
+			if (timer >= 1500) //Phase 3
 				{
 					npc.velocity.X = 0f;
 					npc.velocity.Y = 0f;
-					npc.alpha = 100;
-					if (Main.expertMode && npc.life <= 3000)
-				{
-					npc.alpha = 200;
-				}
 					
 				shootTimerB++;
 				
@@ -157,6 +148,61 @@ namespace TGEM.NPCs.Boss.GhastlyEnt
 						timer = 0;
 					}
 				}
+				
+				if (Main.expertMode && npc.life <= 1750) //FINAL PHASE BOIS
+					{
+						timer = 0;
+						shootTimerC++;
+						appleTimer++;
+						
+						if (shootTimerC == 40)
+						{
+						Vector2 direction2 = Main.player[npc.target].Center + new Vector2(player.velocity.X * 2f, player.velocity.Y * 2f) - npc.Center;
+						direction2.Normalize();
+						Projectile.NewProjectile(npc.Center.X, npc.Center.Y, direction2.X * 15f, direction2.Y * 15f, mod.ProjectileType("Air"), 12, 1, Main.myPlayer, 0, 0);
+						shootTimerC = 0;
+						}
+						
+						if (appleTimer == 150)
+						{
+							Projectile.NewProjectile(npc.Center.X, npc.Center.Y, -10f, -1f, mod.ProjectileType("ForestPortal"), 12, 1, Main.myPlayer, 0, 0);
+							Projectile.NewProjectile(npc.Center.X, npc.Center.Y, 10f, -1f, mod.ProjectileType("ForestPortal"), 12, 1, Main.myPlayer, 0, 0);
+							appleTimer = 0;
+						}
+						
+							if (npc.Center.X >= player.Center.X && moveSpeedx2 >= -50) // flies to players x position
+						{
+							moveSpeedx2--;
+						}
+					
+						if (npc.Center.X <= player.Center.X && moveSpeedx2 <= 50)
+						{
+							moveSpeedx2++;
+						}
+				
+						npc.velocity.X = moveSpeedx2 * 0.15f;
+				
+						if (npc.Center.Y >= player.Center.Y && moveSpeedy2 >= -35) //flies to players Y position
+						{
+							moveSpeedy2--;
+						}
+					
+						if (npc.Center.Y <= player.Center.Y && moveSpeedy2 <= 35)
+						{
+							moveSpeedy2++;
+						}
+				
+
+					npc.velocity.Y = moveSpeedy2 * 0.07f;
+					}
+					
+			if (!player.active || player.dead)
+            {
+                npc.TargetClosest(false);
+                npc.velocity.Y = -20;
+				timer = 0;
+				shootTimerC = 0;
+            }
 			
 		}
 					public override void FindFrame(int frameHeight)
