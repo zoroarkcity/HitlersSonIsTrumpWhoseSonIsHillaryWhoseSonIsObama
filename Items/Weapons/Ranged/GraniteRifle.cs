@@ -38,6 +38,7 @@ namespace TGEM.Items.Weapons.Ranged
             {
                 type = mod.ProjectileType("GraniteBullet");
             }
+            return true;
         }
     }
 }

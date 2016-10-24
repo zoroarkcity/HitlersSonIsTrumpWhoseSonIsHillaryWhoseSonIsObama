@@ -1,7 +1,8 @@
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using System;
 using Terraria.ID;
+using System.Diagnostics;
+using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 
 namespace TGEM.Projectiles.Ranged
@@ -19,14 +20,19 @@ namespace TGEM.Projectiles.Ranged
             projectile.penetrate = 1;
             projectile.timeLeft = 600;
             projectile.extraUpdates = 1;
-			projectile.alpha = 255;
+            projectile.alpha = 0;
         }
-		
-		   public override void AI()
-		{
-			int dust;
-			dust = Dust.NewDust(projectile.Center + projectile.velocity, projectile.width, projectile.height, 176, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
-			Main.dust[dust].scale = 1.5f;
-		}
+
+        public override void AI()
+        {
+            {
+                int dust;
+                dust = Dust.NewDust(projectile.Center + projectile.velocity, projectile.width, projectile.height, 59, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
+                Main.dust[dust].scale = 1.5f;
+            }
+            {
+                projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
+            }
+        }
     }
 }
