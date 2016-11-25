@@ -12,8 +12,8 @@ namespace TGEM.Projectiles.Ranged
         public override void SetDefaults()
         {
             projectile.name = "Granite Shot";
-            projectile.width = 2;
-            projectile.height = 40;
+            projectile.width = 1;
+            projectile.height = 20;
             projectile.aiStyle = -1;
             projectile.friendly = true;
             projectile.ranged = true;
@@ -27,7 +27,7 @@ namespace TGEM.Projectiles.Ranged
         {
             {
                 int dust;
-                dust = Dust.NewDust(projectile.Center + projectile.velocity, projectile.width, projectile.height, 59, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
+                dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 59, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
                 Main.dust[dust].scale = 1.5f;
             }
             {

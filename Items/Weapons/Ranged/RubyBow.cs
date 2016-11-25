@@ -19,8 +19,8 @@ namespace TGEM.Items.Weapons.Ranged
             item.width = 27;
             item.height = 11;
             item.toolTip = "Arrows penetrate enemies";
-            item.useTime = 24;
-            item.useAnimation = 24;
+            item.useTime = 30;
+            item.useAnimation = 30;
             item.useStyle = 5;
             item.shoot = 3;
             item.useAmmo = 1;
@@ -35,8 +35,7 @@ namespace TGEM.Items.Weapons.Ranged
 		
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			int p = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, player.whoAmI);
-			Main.projectile[p].penetrate += 1;
+			Projectile.NewProjectile(position.X, position.Y, speedX, speedY, mod.ProjectileType("RubyArrow"), damage, knockBack, player.whoAmI);
 				
 			return false;
 		}
