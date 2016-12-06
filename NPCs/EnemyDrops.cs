@@ -9,31 +9,12 @@ namespace TGEM.NPCs
     {
         public override void NPCLoot(NPC npc)
         {
-            if (npc.type == NPCID.Pumpking)
+            if (npc.type == NPCID.WallofFlesh)
             {
-                if (Main.rand.Next(3) == 0)   //item rarity
-                {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Pumpking")); //Item spawn
-                }
+               int amountToDrop = Main.rand.Next(10,15);
+               Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BrassAlloy"), amountToDrop); 
             }
-        }
-        public override bool PreNPCLoot(NPC npc)
-        {
-            if (npc.type == NPCID.IceQueen) 
-            {
-                if (Main.rand.Next(3) == 0)   //item rarity
-                {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Snowyo"));  
-                    return true;
-                }
-            }
-
-            if (npc.type == NPCID.Golem)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GolemStaff"));
-                return true;
-            }
-            return true;
+          
         }
     }
 }
