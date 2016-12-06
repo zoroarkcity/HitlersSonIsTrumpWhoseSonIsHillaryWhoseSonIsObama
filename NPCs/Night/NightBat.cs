@@ -16,8 +16,8 @@ namespace TGEM.NPCs.Night
 			npc.damage = 15;
 			npc.defense = 10;
 			npc.lifeMax = 25;
-			npc.soundHit = 1;
-			npc.soundKilled = 1;
+			npc.HitSound = SoundID.NPCHit1;
+			npc.DeathSound = SoundID.NPCDeath1;
 			npc.value = 60f;
 			npc.knockBackResist = 1f;
 			npc.aiStyle = 14;

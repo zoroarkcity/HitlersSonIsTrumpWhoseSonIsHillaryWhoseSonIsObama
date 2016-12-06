@@ -20,7 +20,7 @@ public class PowerBlade : ModItem
         item.knockBack = 3;
         item.value = 10000;
         item.rare = 1;
-        item.useSound = 1;
+        item.UseSound = SoundID.Item1;
         item.autoReuse = true;
 		item.toolTip = "Shoots yellow bolts";
         item.shoot = 122;

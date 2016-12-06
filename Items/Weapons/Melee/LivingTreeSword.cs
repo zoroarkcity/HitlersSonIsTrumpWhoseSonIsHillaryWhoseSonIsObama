@@ -1,7 +1,8 @@
-using System;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace TGEM.Items.Weapons.Melee {
 public class LivingTreeSword : ModItem
@@ -19,7 +20,7 @@ public class LivingTreeSword : ModItem
         item.knockBack = 3;
         item.value = 10000;
         item.rare = 1;
-        item.useSound = 1;
+        item.UseSound = SoundID.Item1;
         item.autoReuse = true;
 		item.toolTip = "Swings Slow, but hits heavily";
         item.useTurn = true;

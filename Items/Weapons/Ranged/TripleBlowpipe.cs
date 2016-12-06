@@ -22,7 +22,7 @@ public class TripleBlowpipe : ModItem
         item.knockBack = 4;
         item.value = 10000;
         item.rare = 2;
-        item.useSound = 5;
+        item.UseSound = SoundID.Item5;
         item.autoReuse = true;
         item.shoot = 51; 
         item.shootSpeed = 10f;

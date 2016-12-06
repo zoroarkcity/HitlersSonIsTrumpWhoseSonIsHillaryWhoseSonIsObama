@@ -20,7 +20,7 @@ public class PowerTome : ModItem
         item.knockBack = 3;
         item.value = 10000;
         item.rare = 1;
-        item.useSound = 0;
+        item.UseSound = SoundID.Item20;
         item.autoReuse = true;
 		item.toolTip = "Shoots yellow bolts";
         item.shoot = 122;

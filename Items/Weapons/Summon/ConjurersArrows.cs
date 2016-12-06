@@ -24,9 +24,9 @@ namespace TGEM.Items.Weapons.Summon
             item.knockBack = 7;
             item.value = 10000;
             item.rare = 2;
-            item.useSound = 14;
+            item.UseSound = SoundID.Item14;
             item.autoReuse = true;
-            item.shoot = (1);
+            item.shoot = 1;
             item.shootSpeed = 14f;
         }
 

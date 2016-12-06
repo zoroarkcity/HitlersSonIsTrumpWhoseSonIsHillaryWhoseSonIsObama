@@ -20,7 +20,7 @@ public class SoaringBat : ModItem
         item.knockBack = 4;
         item.value = 10000;
         item.rare = 1;
-        item.useSound = 1;
+        item.UseSound = SoundID.Item1;
 		item.toolTip = "Knocks enemies upward";
         item.autoReuse = true;
 		item.useTurn = true;

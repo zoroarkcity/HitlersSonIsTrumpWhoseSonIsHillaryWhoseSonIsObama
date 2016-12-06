@@ -27,7 +27,7 @@ namespace TGEM.Items.Weapons.Melee
             item.useTime = 40;
             item.useAnimation = 40;
             item.useStyle = 1;
-            item.useSound = 1;
+            item.UseSound = SoundID.Item1;
             item.value = 10000;
             item.rare = 5;
 

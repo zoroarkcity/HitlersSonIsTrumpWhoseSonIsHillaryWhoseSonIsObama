@@ -26,7 +26,7 @@ namespace TGEM.Items.Weapons.Tool
 			item.knockBack = 6;
 			item.value = Item.buyPrice(0, 22, 50, 0);
 			item.rare = 9;
-			item.useSound = 23;
+			item.UseSound = SoundID.Item25;
 			item.autoReuse = true;
 			item.shoot = mod.ProjectileType("OpticChainsaw");
 			item.shootSpeed = 40f;

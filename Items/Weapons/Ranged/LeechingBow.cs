@@ -20,8 +20,8 @@ public class LeechingBow : ModItem
         item.knockBack = 5;
         item.value = 10000;
         item.rare = 2;
-        item.useSound = 5;
-        item.autoReuse = false;
+		item.useAmmo = 40;
+        item.UseSound = SoundID.Item5;
 		item.shoot = mod.ProjectileType("LeechingArrow");
 		item.shootSpeed = 15f;
 		item.scale = 1.1f;

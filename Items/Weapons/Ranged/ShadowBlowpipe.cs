@@ -22,11 +22,11 @@ public class ShadowBlowpipe : ModItem
         item.knockBack = 4;
         item.value = 10000;
         item.rare = 2;
-        item.useSound = 5;
+        item.UseSound = SoundID.Item5;
         item.autoReuse = true;
         item.shoot = 51; 
         item.shootSpeed = 16f;
-        item.useAmmo = ProjectileID.Seed;
+        item.useAmmo = AmmoID.Dart;
     }
 	
     public override void AddRecipes()

@@ -28,6 +28,7 @@ namespace TGEM.Items.Weapons.Magic
             item.autoReuse = true;
             item.shoot = (123);
             item.shootSpeed = 25f;
+			item.UseSound = SoundID.Item20;
         }
 
         public override void AddRecipes()

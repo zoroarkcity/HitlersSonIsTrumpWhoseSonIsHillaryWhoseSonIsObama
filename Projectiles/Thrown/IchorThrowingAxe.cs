@@ -22,6 +22,13 @@ namespace TGEM.Projectiles.Thrown
             projectile.timeLeft = 6000;
         }
 
+        public override void AI()
+        {
+            {
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, 19, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
+            }
+        }
+
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
                 target.AddBuff(69, 180, false);

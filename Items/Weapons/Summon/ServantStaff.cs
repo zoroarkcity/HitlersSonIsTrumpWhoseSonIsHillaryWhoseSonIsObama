@@ -35,7 +35,7 @@ namespace TGEM.Items.Weapons.Summon
             item.buffTime = 3600;
             item.value = 450000;
             item.rare = 6;
-            item.useSound = 82;
+            item.UseSound = SoundID.Item82;
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("Servant");
             item.shootSpeed = 10f;

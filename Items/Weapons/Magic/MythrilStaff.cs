@@ -18,6 +18,7 @@ namespace TGEM.Items.Weapons.Magic
             item.height = 26;
             item.toolTip = "Fires three bolts of energy!";
             item.useTime = 31;
+			item.UseSound = SoundID.Item20;
             item.useAnimation = 31;
             item.useStyle = 5;
             item.noMelee = true;

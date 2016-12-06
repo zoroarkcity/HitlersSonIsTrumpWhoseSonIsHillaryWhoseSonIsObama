@@ -24,11 +24,10 @@ public class PowerKnife : ModItem
 		item.shootSpeed = 10f;
 		item.shoot = mod.ProjectileType("PowerKnifeProj");
         item.knockBack = 1;
-		item.useSound = 1;
+		item.UseSound = SoundID.Item1;
 		item.scale = 1f;
         item.value = 10000;
         item.rare = 1;
-        item.useSound = 1;
         item.autoReuse = true;
 		item.consumable = true;
 		item.maxStack = 999;

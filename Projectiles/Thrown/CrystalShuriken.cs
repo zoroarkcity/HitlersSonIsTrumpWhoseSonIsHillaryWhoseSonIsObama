@@ -22,14 +22,17 @@ namespace TGEM.Projectiles.Thrown
             projectile.timeLeft = 6000;
 
         }
-        public override void AI()
-        {
-            if (Main.rand.Next(10) == 0)
-            {
-                int rand = Main.rand.Next(5); //Generates integers from 0 to 4
-                Projectile.NewProjectile(projectile.position.X, projectile.position.Y, 0, 0, 90, (int)(projectile.damage * 1.5), projectile.knockBack, Main.myPlayer); // 296 is the explosion from the Inferno Fork
-            }
-        }
+        public override void Kill(int timeLeft)
+			{
+				int amountOfProjectiles = Main.rand.Next(5, 10);
+			
+				for (int i = 0; i < amountOfProjectiles; ++i)
+					{
+						float sX = (float)Main.rand.Next(-60, 61) * 0.2f;
+						float sY = (float)Main.rand.Next(-60, 61) * 0.2f;
+						Projectile.NewProjectile(projectile.position.X, projectile.position.Y, sX, sY, 90, 15, 5f, projectile.owner);
+					}
+			}
         }
 
         public class CrystalShuriken : ModItem

@@ -23,6 +23,13 @@ namespace TGEM.Projectiles.Thrown
 
         }
 
+        public override void AI()
+        {
+            {
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, 75, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
+            }
+        }
+
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
             target.AddBuff(39, 180, false);
@@ -35,6 +42,7 @@ namespace TGEM.Projectiles.Thrown
                 target.AddBuff(39, 180, false);
             }
         }
+	}
         // This .cs file has 2 classes in it, which is totally fine. (What is important is that namespace+classname is unique. Remember that autoloaded textures follow the namespace+classname convention as well.)
         // This is an approach you can take to fit your organization style.
         public class CursedKnife : ModItem
@@ -61,4 +69,3 @@ namespace TGEM.Projectiles.Thrown
             }
         }
     }
-}

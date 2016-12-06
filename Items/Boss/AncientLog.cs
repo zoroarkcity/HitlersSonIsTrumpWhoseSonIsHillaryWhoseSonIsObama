@@ -17,7 +17,6 @@ public override void SetDefaults()
         item.useAnimation = 45;
         item.useTime = 45;
         item.useStyle = 4;
-        item.useSound = 0;
         item.consumable = true;
     }
 	

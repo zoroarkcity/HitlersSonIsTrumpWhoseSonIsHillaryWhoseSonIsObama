@@ -34,8 +34,8 @@ namespace TGEM.NPCs.Boss.GhastlyEnt
             npc.lavaImmune = true;
             npc.noTileCollide = true;
             npc.noGravity = true;
-            npc.soundHit = 7;
-            npc.soundKilled = 3;
+            npc.HitSound = SoundID.NPCHit7;
+			npc.DeathSound = SoundID.NPCDeath3;
             music = 12;
 			Main.npcFrameCount[npc.type] = 5;
 			npc.scale = 1.25f;

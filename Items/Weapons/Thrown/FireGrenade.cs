@@ -23,11 +23,10 @@ public class FireGrenade : ModItem
 		item.shootSpeed = 5.5f;
 		item.shoot = mod.ProjectileType("FireGrenadeProj");
         item.knockBack = 1;
-		item.useSound = 1;
 		item.scale = 1f;
         item.value = 75;
         item.rare = 1;
-        item.useSound = 1;
+        item.UseSound = SoundID.Item1;
         item.autoReuse = false;
         item.consumable = true;
         item.maxStack = 999;

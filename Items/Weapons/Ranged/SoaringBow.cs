@@ -20,12 +20,12 @@ public class SoaringBow : ModItem
         item.knockBack = 1;
         item.value = 10000;
         item.rare = 2;
-        item.useSound = 5;
+        item.UseSound = SoundID.Item5;
         item.autoReuse = true;
 		item.shoot = ProjectileID.WoodenArrowFriendly;
 		item.shootSpeed = 12f;
 		item.noMelee = true;
-		item.useAmmo = ProjectileID.WoodenArrowFriendly;
+		item.useAmmo = AmmoID.Arrow;
     }
 	
 			public override void AddRecipes()

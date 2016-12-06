@@ -15,12 +15,13 @@ public class ToxicGas : ModItem
         item.width = 50;
         item.height = 50;
         item.useTime = 7;
+		item.UseSound = SoundID.Item20;
         item.useAnimation = 7;
         item.useStyle = 5;
         item.knockBack = 5;
         item.value = 10000;
         item.rare = 2;
-        item.useSound = 20;
+        item.UseSound = SoundID.Item20;
         item.autoReuse = true;
 		item.shoot = mod.ProjectileType("ToxicGasProj");
 		item.shootSpeed = 10f;

@@ -21,7 +21,7 @@ namespace TGEM.Items.Weapons.Melee
             item.knockBack = 6.5f;
             item.value = 10000;
             item.rare = 2;
-            item.useSound = 1;
+            item.UseSound = SoundID.Item1;
             item.autoReuse = true;
         }
 

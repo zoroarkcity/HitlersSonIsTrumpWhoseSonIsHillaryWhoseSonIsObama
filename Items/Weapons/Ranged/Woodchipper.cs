@@ -16,7 +16,7 @@ public class Woodchipper : ModItem
         item.height = 24;
         item.useTime = 34;
         item.useAnimation = 34;
-		item.useSound = 36;
+		item.UseSound = SoundID.Item36;
         item.useStyle = 5;
         item.knockBack = 3;
         item.value = 10000;
@@ -25,7 +25,7 @@ public class Woodchipper : ModItem
 		item.toolTip = "Fires a bullet along with woodchips";
         item.shoot = 10; 
 		item.shootSpeed = 7f;
-		item.useAmmo = ProjectileID.Bullet;
+		item.useAmmo = AmmoID.Bullet;
     }
 
     public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)

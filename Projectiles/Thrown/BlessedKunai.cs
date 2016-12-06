@@ -13,15 +13,22 @@ namespace TGEM.Projectiles.Thrown
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.JestersArrow);
-            projectile.name = "BlessedKunai";
+            projectile.name = "Gladius";
             projectile.width = 7;
             projectile.height = 14;
             projectile.penetrate = -1;
             aiType = ProjectileID.JestersArrow;
             projectile.ignoreWater = true;
             projectile.timeLeft = 6000;
-            }
+         
         }
+
+        public override void AI()
+        {
+            {
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, 10, projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
+            }
+	}}
         
         public class BlessedKunai : ModItem
         {
@@ -31,7 +38,7 @@ namespace TGEM.Projectiles.Thrown
                 item.CloneDefaults(ItemID.Shuriken);
                 item.damage = 55;
                 item.shoot = mod.ProjectileType("BlessedKunaiP");
-                item.name = "Blessed Kunai";
+                item.name = "Gladius";
                 item.rare = 4;
                 item.shootSpeed = 10f;
 				item.autoReuse = true;

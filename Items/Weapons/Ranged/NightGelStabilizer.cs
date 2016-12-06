@@ -20,7 +20,7 @@ public class NightGelStabilizer : ModItem
         item.knockBack = 5;
         item.value = 10000;
         item.rare = 2;
-        item.useSound = 13;
+        item.UseSound = SoundID.Item13;
         item.autoReuse = true;
 		item.shoot = mod.ProjectileType("DarkGelShot");
 		item.shootSpeed = 15f;

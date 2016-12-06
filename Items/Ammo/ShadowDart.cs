@@ -19,11 +19,11 @@ public class ShadowDart : ModItem
 		item.shootSpeed = 2f;
 		item.shoot = mod.ProjectileType("ShadowDartProj");
         item.knockBack = 1;
-		item.useSound = 1;
+		item.UseSound = SoundID.Item1;
 		item.scale = 1f;
         item.value = 10000;
         item.rare = 1;
-        item.ammo = ProjectileID.Seed;
+        item.ammo = AmmoID.Dart;
 		item.maxStack = 999;
 		item.consumable = true;
     }

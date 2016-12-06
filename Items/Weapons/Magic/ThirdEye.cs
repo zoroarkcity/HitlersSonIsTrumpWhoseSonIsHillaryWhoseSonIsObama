@@ -25,7 +25,7 @@ namespace TGEM.Items.Weapons.Magic
             item.knockBack = 7;
             item.value = 10000;
             item.rare = 2;
-            item.useSound = 20;
+            item.UseSound = SoundID.Item20;
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("PsyBolt");
             item.shootSpeed = 2.25f;
