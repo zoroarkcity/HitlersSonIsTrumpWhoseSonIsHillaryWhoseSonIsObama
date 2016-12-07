@@ -53,4 +53,9 @@ public class TripleBlowpipe : ModItem
         recipe.SetResult(this);
         recipe.AddRecipe();
     }
+	
+	public override Vector2? HoldoutOffset()
+		{
+			return new Vector2(10, 0);
+		}
 }}

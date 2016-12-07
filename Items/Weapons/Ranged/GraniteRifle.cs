@@ -17,7 +17,7 @@ namespace TGEM.Items.Weapons.Ranged
             item.width = 31;
             item.height = 32;
             item.crit = 15;
-            item.toolTip = "Destroyes your enemies with ease";
+            item.toolTip = "Destroys your enemies with ease";
             item.useTime = 35;
             item.useAnimation = 35;
             item.useStyle = 5;
@@ -40,5 +40,10 @@ namespace TGEM.Items.Weapons.Ranged
             }
             return true;
         }
+		
+		public override Vector2? HoldoutOffset()
+		{
+			return new Vector2(-5, 0);
+		}
     }
 }

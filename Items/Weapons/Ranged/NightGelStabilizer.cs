@@ -27,4 +27,9 @@ public class NightGelStabilizer : ModItem
 		item.noMelee = true;
         item.scale = 0.9f;
     }
+	
+	public override Vector2? HoldoutOffset()
+		{
+			return new Vector2(10, 0);
+		}
 }}

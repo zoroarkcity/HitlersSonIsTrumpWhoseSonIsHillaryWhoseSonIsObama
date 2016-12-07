@@ -7,20 +7,20 @@ using Terraria.ModLoader;
 
 namespace TGEM.Items.Weapons.Ranged
 {
-    public class AmberBow : ModItem
+    public class AccursedBow : ModItem
     {
 
         public override void SetDefaults()
         {
-            item.name = "Amber Longbow";
-            item.damage = 13;
+            item.name = "Witch Hunter";
+            item.damage = 24;
             item.noMelee = true;
             item.ranged = true;
             item.width = 27;
             item.height = 11;
-            item.toolTip = "Arrows penetrate enemies";
-            item.useTime = 30;
-            item.useAnimation = 30;
+            item.toolTip = "Arrows shot inflict cursed flame";
+            item.useTime = 22;
+            item.useAnimation = 22;
             item.useStyle = 5;
             item.shoot = 3;
             item.useAmmo = 40;
@@ -35,15 +35,22 @@ namespace TGEM.Items.Weapons.Ranged
 		
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			Projectile.NewProjectile(position.X, position.Y, speedX, speedY, mod.ProjectileType("AmberArrow"), damage, knockBack, player.whoAmI);
-				
+			for (int i = 0; i < 2; ++i)
+			{
+				float sX = speedX;
+				float sY = speedY;
+				sX += (float)Main.rand.Next(-30, 30) * 0.05f;
+				sY += (float)Main.rand.Next(-30, 30) * 0.05f;
+				int p = Projectile.NewProjectile(position.X, position.Y, sX, sY, 103, damage, knockBack, player.whoAmI);
+				Main.projectile[p].noDropItem = true;
+			}
 			return false;
 		}
 		
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Amber, 15);
+            recipe.AddIngredient(null, "AccursedBar", 15);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

@@ -24,18 +24,20 @@ namespace TGEM.Items.Weapons.Melee
             item.useTurn = true;
             item.width = 46;
             item.height = 48;
-            item.useTime = 40;
-            item.useAnimation = 40;
+            item.useTime = 30;
+            item.useAnimation = 30;
             item.useStyle = 1;
             item.UseSound = SoundID.Item1;
             item.value = 10000;
             item.rare = 5;
+			item.autoReuse = true;
+			item.useTurn = true;
 
         }
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
         {
-            if (Main.rand.Next(4) == 0)
+            if (Main.rand.Next(2) == 0)
             {
                 target.AddBuff(39, 360, false);
             }

@@ -33,7 +33,6 @@ namespace TGEM.Items.Weapons.Ranged
 			item.shoot = 10; 
 			item.shootSpeed = 16f;
 			item.useAmmo = AmmoID.Bullet;
-			item.scale = 0.8f;
         }
 		
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
@@ -61,5 +60,10 @@ namespace TGEM.Items.Weapons.Ranged
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
+		
+		public override Vector2? HoldoutOffset()
+		{
+			return new Vector2(4, 0);
+		}
     }
 }
