@@ -26,7 +26,7 @@ public class TripleBlowpipe : ModItem
         item.autoReuse = true;
         item.shoot = 51; 
         item.shootSpeed = 10f;
-        item.useAmmo = ProjectileID.Seed;
+        item.useAmmo = AmmoID.Dart;
     }
 
 
