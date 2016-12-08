@@ -21,6 +21,13 @@ namespace TGEM.Projectiles.Thrown
             projectile.ignoreWater = true;
             projectile.timeLeft = 6000;
         }
+        public override void Kill(int timeLeft)
+        {
+        	if (Main.rand.Next(2) == 0)
+        	{
+        		Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("PalladiumShuriken"));
+        	}
+        }
 
     }
 
@@ -30,7 +37,7 @@ namespace TGEM.Projectiles.Thrown
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.Shuriken);
-            item.damage = 22;
+            item.damage = 33;
             item.shoot = mod.ProjectileType("PalladiumShurikenP");
             item.name = "Palladium Shuriken";
             item.rare = 4;

@@ -21,6 +21,14 @@ namespace TGEM.Projectiles.Thrown
             projectile.ignoreWater = true;
             projectile.timeLeft = 6000;
          
+         }
+        
+        public override void Kill(int timeLeft)
+        {
+        	if (Main.rand.Next(3) == 0)
+        	{
+        		Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("BlessedKunai"));
+        	}
         }
 
         public override void AI()
@@ -36,11 +44,13 @@ namespace TGEM.Projectiles.Thrown
             public override void SetDefaults()
             {
                 item.CloneDefaults(ItemID.Shuriken);
-                item.damage = 55;
+                item.damage = 49;
                 item.shoot = mod.ProjectileType("BlessedKunaiP");
                 item.name = "Gladius";
                 item.rare = 4;
-                item.shootSpeed = 10f;
+				item.useTime = 13;
+				item.useAnimation = 13;
+                item.shootSpeed = 9f;
 				item.autoReuse = true;
             }
 

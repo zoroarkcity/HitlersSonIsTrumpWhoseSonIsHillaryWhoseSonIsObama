@@ -20,6 +20,13 @@ namespace TGEM.Projectiles.Thrown
             aiType = ProjectileID.Shuriken;
             projectile.ignoreWater = true;
             projectile.timeLeft = 6000;
+		}
+        public override void Kill(int timeLeft)
+        {
+        	if (Main.rand.Next(2) == 0)
+        	{
+        		Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("TitaniumShuriken"));
+        	}
         }
 
     }
@@ -30,11 +37,13 @@ namespace TGEM.Projectiles.Thrown
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.Shuriken);
-            item.damage = 32;
+            item.damage = 44;
             item.shoot = mod.ProjectileType("TitaniumShurikenP");
             item.name = "Titanium Shuriken";
             item.rare = 4;
-            item.shootSpeed = 13f;
+			item.useTime = 13;
+			item.useAnimation = 13;
+            item.shootSpeed = 19f;
             item.autoReuse = true;
         }
 

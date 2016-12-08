@@ -21,6 +21,13 @@ namespace TGEM.Projectiles.Thrown
             projectile.ignoreWater = true;
             projectile.timeLeft = 6000;
         }
+        public override void Kill(int timeLeft)
+        {
+        	if (Main.rand.Next(2) == 0)
+        	{
+        		Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("MythrilShuriken"));
+        	}
+        }
 
     }
 
@@ -30,11 +37,11 @@ namespace TGEM.Projectiles.Thrown
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.Shuriken);
-            item.damage = 25;
+            item.damage = 36;
             item.shoot = mod.ProjectileType("MythrilShurikenP");
             item.name = "Mythril Shuriken";
             item.rare = 4;
-            item.shootSpeed = 14f;
+            item.shootSpeed = 17f;
             item.autoReuse = true;
         }
 
