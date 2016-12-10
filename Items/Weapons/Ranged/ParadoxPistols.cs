@@ -21,8 +21,8 @@ namespace TGEM.Items.Weapons.Ranged
 			item.width = 23;
 			item.height = 13;
 			item.toolTip = "Fires another bullet when a bullet hits an enemy, which can create another bullet, which can create another bullet...";
-			item.useTime = 2;
-			item.useAnimation = 2;
+			item.useTime = 4;
+			item.useAnimation = 4;
 			item.useStyle = 5;
 			item.noMelee = true; 
 			item.knockBack = 4;
