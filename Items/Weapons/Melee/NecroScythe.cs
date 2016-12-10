@@ -23,6 +23,8 @@ namespace TGEM.Items.Weapons.Melee
             item.rare = 2;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
+			item.shoot = mod.ProjectileType("NecroflameSickleProj");
+			item.shootSpeed = 10f;
         }
 
         public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)

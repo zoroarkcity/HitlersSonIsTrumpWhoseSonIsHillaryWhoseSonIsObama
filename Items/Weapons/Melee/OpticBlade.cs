@@ -14,8 +14,8 @@ namespace TGEM.Items.Weapons.Melee
             item.melee = true;
             item.width = 23;
             item.height = 23;
-            item.toolTip = "No enemy can hide from its might.";
-            item.useTime = 20;
+            item.toolTip = "No enemy can hide from its might";
+            item.useTime = 40;
             item.useAnimation = 20;
             item.useStyle = 1;
             item.knockBack = 6.5f;
@@ -23,6 +23,8 @@ namespace TGEM.Items.Weapons.Melee
             item.rare = 2;
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
+			item.shoot = mod.ProjectileType("OpticBladeProj");
+			item.shootSpeed = 5f;
         }
 
         public override void HoldItem(Player player)
