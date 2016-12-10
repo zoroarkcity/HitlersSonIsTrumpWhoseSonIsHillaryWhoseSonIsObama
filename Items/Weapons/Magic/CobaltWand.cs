@@ -41,5 +41,13 @@ namespace TGEM.Items.Weapons.Magic
             recipe.AddRecipe();
 
         }
+		
+		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        {
+			
+			int p4 = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, player.whoAmI, 0, 0);
+			Main.projectile[p4].penetrate = 2;
+			return false;
+		}
     }
 }
