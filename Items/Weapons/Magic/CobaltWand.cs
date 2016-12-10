@@ -26,7 +26,7 @@ namespace TGEM.Items.Weapons.Magic
             Item.staff[item.type] = true;
             item.rare = 2;
             item.autoReuse = true;
-            item.shoot = (123);
+            item.shoot = (122);
             item.shootSpeed = 25f;
 			item.UseSound = SoundID.Item20;
         }
@@ -35,6 +35,7 @@ namespace TGEM.Items.Weapons.Magic
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.CobaltBar, 12);
+			recipe.AddIngredient(ItemID.Topaz, 5);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
             recipe.AddRecipe();

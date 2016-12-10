@@ -14,8 +14,8 @@ public class PowerTome : ModItem
         item.magic = true;
         item.width = 22;
         item.height = 24;
-        item.useTime = 18;
-        item.useAnimation = 18;
+        item.useTime = 25;
+        item.useAnimation = 25;
         item.useStyle = 5;
         item.knockBack = 3;
         item.value = 10000;

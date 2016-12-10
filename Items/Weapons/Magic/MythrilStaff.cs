@@ -35,6 +35,7 @@ namespace TGEM.Items.Weapons.Magic
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.MythrilBar, 12);
+			recipe.AddIngredient(ItemID.Emerald, 5);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
             recipe.AddRecipe();
