@@ -19,8 +19,8 @@ namespace TGEM.Items.Weapons.Ranged
             item.width = 27;
             item.height = 11;
             item.toolTip = "Arrows penetrate enemies";
-            item.useTime = 30;
-            item.useAnimation = 30;
+            item.useTime = 34;
+            item.useAnimation = 34;
             item.useStyle = 5;
             item.shoot = 3;
             item.useAmmo = 40;
