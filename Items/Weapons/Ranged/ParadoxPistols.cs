@@ -15,21 +15,21 @@ namespace TGEM.Items.Weapons.Ranged
 	{
 		public override void SetDefaults()
 		{
-			item.name = "Paradox Pistols";
+			item.name = "Paradox Pistol";
 			item.damage = 150;
 			item.ranged = true;
 			item.width = 23;
 			item.height = 13;
 			item.toolTip = "Fires another bullet when a bullet hits an enemy, which can create another bullet, which can create another bullet...";
-			item.useTime = 15;
-			item.useAnimation = 15;
+			item.useTime = 2;
+			item.useAnimation = 2;
 			item.useStyle = 5;
 			item.noMelee = true; 
 			item.knockBack = 4;
 			item.value = 10000;
 			item.rare = 2;
 			item.UseSound = SoundID.Item11;
-			item.autoReuse = true;
+			item.autoReuse = false;
 			item.shoot = 10; 
 			item.shootSpeed = 16f;
 			item.useAmmo = AmmoID.Bullet;
@@ -37,7 +37,7 @@ namespace TGEM.Items.Weapons.Ranged
 		
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			for (int i = 0; i < 2; ++i)
+			for (int i = 0; i < 1; ++i)
 			{
 				float sX = speedX;
 				float sY = speedY;

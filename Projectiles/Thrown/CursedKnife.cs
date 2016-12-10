@@ -51,7 +51,7 @@ namespace TGEM.Projectiles.Thrown
             public override void SetDefaults()
             {
                 item.CloneDefaults(ItemID.Shuriken);
-                item.damage = 45;
+                item.damage = 38;
                 item.shoot = mod.ProjectileType("CursedKnifeP");
                 item.name = "Cursed Knife";
                 item.rare = 4;

@@ -50,7 +50,7 @@ namespace TGEM.Projectiles.Thrown
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.Shuriken);
-            item.damage = 25;
+            item.damage = 30;
             item.shoot = mod.ProjectileType("IchorAxe");
             item.name = "Ichor Throwing Axe";
             item.rare = 4;

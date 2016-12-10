@@ -16,7 +16,7 @@ namespace TGEM.Projectiles.Thrown
             projectile.name = "Crystal Shuriken";
             projectile.width = 22;       //projectile width
             projectile.height = 22;
-            projectile.penetrate = 2;
+            projectile.penetrate = 1;
             aiType = 3;
             projectile.ignoreWater = true;
             projectile.timeLeft = 6000;
@@ -24,7 +24,7 @@ namespace TGEM.Projectiles.Thrown
         }
         public override void Kill(int timeLeft)
 			{
-				int amountOfProjectiles = Main.rand.Next(5, 10);
+				int amountOfProjectiles = Main.rand.Next(3, 4);
 			
 				for (int i = 0; i < amountOfProjectiles; ++i)
 					{
@@ -41,7 +41,7 @@ namespace TGEM.Projectiles.Thrown
             public override void SetDefaults()
             {
                 item.CloneDefaults(ItemID.Shuriken);
-                item.damage = 40;
+                item.damage = 34;
                 item.shoot = mod.ProjectileType("CrystalShurikenP");
                 item.name = "Crystal Shuriken";
                 item.rare = 4;
