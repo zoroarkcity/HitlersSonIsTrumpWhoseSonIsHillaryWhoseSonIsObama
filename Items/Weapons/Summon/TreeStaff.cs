@@ -22,7 +22,7 @@ namespace TGEM.Items.Weapons.Summon
 			item.noMelee = true;
 			item.knockBack = 0;
 			item.rare = 2;
-			item.UseSound = SoundID.Item41;
+			item.UseSound = SoundID.Item82;
 			item.shoot = mod.ProjectileType("TreeMinion");
 			item.shootSpeed = 20f;
 			item.buffType = mod.BuffType("TreeMinion");

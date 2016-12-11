@@ -14,8 +14,8 @@ public class ForestBlast : ModItem
         item.magic = true;
         item.width = 50;
         item.height = 50;
-        item.useTime = 30;
-        item.useAnimation = 30;
+        item.useTime = 28;
+        item.useAnimation = 28;
         item.useStyle = 5;
         item.knockBack = 5;
         item.value = 10000;

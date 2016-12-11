@@ -20,7 +20,6 @@ namespace TGEM.Projectiles.Melee
             projectile.hostile = false;
             projectile.tileCollide = false;
             projectile.penetrate = -1;
-            projectile.ownerHitCheck = true;
             projectile.melee = true;
             projectile.timeLeft = 90;
             projectile.hide = true;
