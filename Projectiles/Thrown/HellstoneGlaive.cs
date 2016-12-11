@@ -21,6 +21,14 @@ namespace TGEM.Projectiles.Thrown
             projectile.ignoreWater = true;
             projectile.timeLeft = 6000;
         }
+		
+        public override void Kill(int timeLeft)
+        {
+        	if (Main.rand.Next(2) == 0)
+        	{
+        		Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("HellstoneGlaive"));
+        	}
+        }
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
@@ -46,7 +54,7 @@ namespace TGEM.Projectiles.Thrown
             item.CloneDefaults(ItemID.Shuriken);
             item.damage = 22;
             item.shoot = mod.ProjectileType("HellstoneGlaiveP");
-            item.name = "Hellstone Glaive";
+            item.name = "Hellstone Shuriken";
             item.rare = 4;
             item.shootSpeed = 15f;
 			item.autoReuse = true;
@@ -57,7 +65,7 @@ namespace TGEM.Projectiles.Thrown
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(175, 1);
             recipe.AddTile(16);
-            recipe.SetResult(this, 30);
+            recipe.SetResult(this, 60);
             recipe.AddRecipe();
         }
     }

@@ -21,6 +21,14 @@ namespace TGEM.Projectiles.Thrown
             projectile.ignoreWater = true;
             projectile.timeLeft = 6000;
         }
+		
+        public override void Kill(int timeLeft)
+        {
+        	if (Main.rand.Next(3) == 0)
+        	{
+        		Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("KnifeOfCthulhu"));
+        	}
+        }
     }
         // This .cs file has 2 classes in it, which is totally fine. (What is important is that namespace+classname is unique. Remember that autoloaded textures follow the namespace+classname convention as well.)
         // This is an approach you can take to fit your organization style.
@@ -51,7 +59,7 @@ namespace TGEM.Projectiles.Thrown
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "OpticBar", 1);
             recipe.AddTile(TileID.DemonAltar);
-            recipe.SetResult(this, 30);
+            recipe.SetResult(this, 50);
             recipe.AddRecipe();
         }
     }

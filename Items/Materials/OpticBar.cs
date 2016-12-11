@@ -20,18 +20,10 @@ namespace TGEM.Items.Materials
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(57, 5);
-            recipe.AddIngredient(38, 2);
-            recipe.AddIngredient(null, "WideLens", 1);
+            recipe.AddIngredient(38, 1);
+            recipe.AddIngredient(null, "WideLens", 3);
             recipe.AddTile(26);
-            recipe.SetResult(this, 5);
-            recipe.AddRecipe();
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(1257, 5);
-            recipe.AddIngredient(38, 2);
-            recipe.AddIngredient(null, "WideLens", 1);
-            recipe.AddTile(26);
-            recipe.SetResult(this, 5);
+            recipe.SetResult(this, 1);
             recipe.AddRecipe();
         }
     }
