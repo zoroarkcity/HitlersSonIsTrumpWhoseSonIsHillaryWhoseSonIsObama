@@ -27,7 +27,16 @@ namespace TGEM.Items.Weapons.Summon
 			item.shootSpeed = 20f;
 			item.buffType = mod.BuffType("TreeMinion");
 			item.buffTime = 3600;
-			item.expert = true;
+		}
+		
+		
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(null, "ForestEnergy", 10);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
 		}
 	}
 }

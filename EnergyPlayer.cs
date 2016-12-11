@@ -15,23 +15,33 @@ namespace TGEM
 		public bool treeMinion = true;
         public bool lifesteal = false;
 		public bool firestorm = false;
+		public bool sapBall = false;
 		public bool canJumpFirestorm = true;
 			public override void ResetEffects()
 		{
 			firestorm = false;
 			treeMinion = false;
             lifesteal = false;
+			sapBall = false;
 		}
 		
 
             public override void OnHitAnything(float x, float y, Entity victim)
             {
-                if (Main.rand.Next(6) == 0 && lifesteal == true)
+                if (Main.rand.Next(8) == 0 && lifesteal == true)
                 {
                     player.HealEffect(1);
                     player.statLife += 1;
                 }
             }
+			
+			public override void OnHitNPCWithProj(Projectile projectile, NPC target, int damage, float knockback, bool crit)
+			{
+				if (sapBall == true && projectile.minion == true && Main.rand.Next(10) == 0)
+				{
+					Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, mod.ProjectileType("SapSphere"), projectile.damage, 5f, player.whoAmI);
+				}
+			}
 			
 			public override void PreUpdate()
 			{
