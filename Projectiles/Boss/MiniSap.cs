@@ -16,7 +16,7 @@ public class MiniSap : ModProjectile
 		projectile.friendly = false;
 		projectile.hostile = true;
 		projectile.alpha = 0;
-		projectile.timeLeft = 300;
+		projectile.timeLeft = 100;
 	}
 	
 			public override void AI()

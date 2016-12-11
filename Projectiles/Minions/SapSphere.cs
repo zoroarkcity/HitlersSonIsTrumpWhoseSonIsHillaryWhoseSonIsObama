@@ -9,8 +9,8 @@ public class SapSphere : ModProjectile
 	public override void SetDefaults()
 	{
 		projectile.name = "Corrosive Sap";
-		projectile.width = 30;
-		projectile.height = 30;
+		projectile.width = 16;
+		projectile.height = 16;
 		projectile.aiStyle = 2;
 		projectile.penetrate = 5;
 		projectile.friendly = true;
@@ -27,11 +27,4 @@ public class SapSphere : ModProjectile
 		}
 	}
 	
-	public override bool OnTileCollide(Vector2 oldVelocity)
-	{
-		if (Main.rand.Next(3) == 0)
-		projectile.velocity *= 0;
-		projectile.aiStyle = 0;
-		return false;
-	}
 }}

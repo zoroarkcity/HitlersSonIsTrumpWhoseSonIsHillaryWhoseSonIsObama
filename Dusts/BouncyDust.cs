@@ -13,6 +13,7 @@ namespace TGEM.Dusts
 			dust.noGravity = true;
 			dust.noLight = true;
 			dust.scale *= 1.5f;
+			dust.frame = new Rectangle(0, 0, 10, 10);
 		}
 	}
 }

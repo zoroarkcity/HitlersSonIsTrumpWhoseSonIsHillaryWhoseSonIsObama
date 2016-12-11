@@ -37,9 +37,12 @@ namespace TGEM
 			
 			public override void OnHitNPCWithProj(Projectile projectile, NPC target, int damage, float knockback, bool crit)
 			{
-				if (sapBall == true && projectile.minion == true && Main.rand.Next(10) == 0)
+				if (sapBall == true && Main.rand.Next(5) == 0)
 				{
-					Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, mod.ProjectileType("SapSphere"), projectile.damage, 5f, player.whoAmI);
+					if (projectile.minion == true || ProjectileID.Sets.MinionShot[projectile.type] || ProjectileID.Sets.SentryShot[projectile.type])
+					{
+						Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0f, 0f, mod.ProjectileType("SapSphere"), projectile.damage, 5f, player.whoAmI);
+					}
 				}
 			}
 			
