@@ -13,7 +13,7 @@ namespace TGEM.Items.Weapons.Ranged
         public override void SetDefaults()
         {
             item.name = "Witch Hunter";
-            item.damage = 24;
+            item.damage = 30;
             item.noMelee = true;
             item.ranged = true;
             item.width = 27;
