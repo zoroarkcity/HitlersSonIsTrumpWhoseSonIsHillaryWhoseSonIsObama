@@ -9,7 +9,8 @@ namespace TGEM.Projectiles
 {
     public class Info : ProjectileInfo
     {
-		public bool Paradox = false;      
+		public bool Paradox = false;
+		public bool Mutilator = false;		
     }
 	
 	public class Stuff : GlobalProjectile
@@ -22,6 +23,10 @@ namespace TGEM.Projectiles
 			Main.projectile[z].GetModInfo<Info>(mod).Paradox = true;
 			Main.projectile[z].tileCollide = false;
 			Main.projectile[z].penetrate = 1;
+			}
+			if(Main.rand.Next(3) == 0 && projectile.GetModInfo<Info>(mod).Mutilator == true)
+			{
+            target.AddBuff(69, 360);
 			}
 		}
 	}
