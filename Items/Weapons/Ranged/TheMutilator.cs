@@ -15,12 +15,12 @@ public class TheMutilator : ModItem
     public override void SetDefaults()
     {
 		item.name = "The Mutilator";
-        item.damage = 20;
+        item.damage = 18;
         item.ranged = true;
         item.width = 22;
         item.height = 24;
-        item.useTime = 13;
-        item.useAnimation = 13;
+        item.useTime = 10;
+        item.useAnimation = 10;
 		item.UseSound = SoundID.Item36;
         item.useStyle = 5;
         item.knockBack = 1.25f;
