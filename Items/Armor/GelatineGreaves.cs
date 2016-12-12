@@ -28,7 +28,7 @@ namespace TGEM.Items.Armor
 
 		public override void UpdateEquip(Player player)
 		{
-           player.minionDamage += 0.7f;
+           player.minionDamage += 0.07f;
 		}
 
 		public override void AddRecipes()
