@@ -18,7 +18,7 @@ namespace TGEM.Items.Materials
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.CursedFlames, 1);
+            recipe.AddIngredient(522, 1);
             recipe.AddIngredient(ItemID.SoulofNight, 1);
             recipe.AddIngredient(ItemID.DemoniteBar, 2);
             recipe.AddIngredient(ItemID.ShadowScale, 1);

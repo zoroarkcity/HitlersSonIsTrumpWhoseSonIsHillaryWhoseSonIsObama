@@ -47,7 +47,7 @@ namespace TGEM.Items.Weapons.Ranged
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "AccursedBar", 15);
+            recipe.AddIngredient(null, "ChaoticBar", 15);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

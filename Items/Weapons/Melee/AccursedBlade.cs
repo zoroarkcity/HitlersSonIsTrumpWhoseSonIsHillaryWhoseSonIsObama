@@ -46,7 +46,7 @@ namespace TGEM.Items.Weapons.Melee
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "ChaoticBar", 15);
+            recipe.AddIngredient(null, "AccursedBar", 15);
             recipe.AddTile(26);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
