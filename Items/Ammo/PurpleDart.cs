@@ -15,7 +15,7 @@ public class PurpleDart : ModItem
         item.ranged = true;
         item.width = 22;
         item.height = 22;
-        item.toolTip = "Shot out of blowpipes, explodes on contact";
+        item.toolTip = "Shot out of blowpipes, explodes into yellow fire on contact";
 		item.shootSpeed = 2f;
 		item.shoot = mod.ProjectileType("PurpleDartProj");
         item.knockBack = 1;
@@ -23,7 +23,17 @@ public class PurpleDart : ModItem
 		item.scale = 1f;
         item.value = 10000;
         item.rare = 1;
-		item.expert = true;
+		item.consumable = true;
+		item.maxStack = 999;
         item.ammo = AmmoID.Dart;
+	}
+		
+		public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(null, "DarkSludge", 1);
+            recipe.SetResult(this, 200);
+            recipe.AddRecipe();
+        }
     }
-}}
+}

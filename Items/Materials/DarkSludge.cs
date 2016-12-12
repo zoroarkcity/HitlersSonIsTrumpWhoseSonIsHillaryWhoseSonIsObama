@@ -20,7 +20,17 @@ namespace TGEM.Items.Materials
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "DarkEnergy", 1);
+            recipe.AddIngredient(null, "DarkEnergy", 2);
+			recipe.AddIngredient(null, "GelatineBar", 2);
+			recipe.AddIngredient(ItemID.TissueSample, 2);
+            recipe.AddTile(26);
+            recipe.SetResult(this, 3);
+            recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+            recipe.AddIngredient(null, "DarkEnergy", 2);
+			recipe.AddIngredient(null, "GelatineBar", 2);
+			recipe.AddIngredient(ItemID.ShadowScale, 2);
             recipe.AddTile(26);
             recipe.SetResult(this, 3);
             recipe.AddRecipe();

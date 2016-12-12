@@ -27,4 +27,12 @@ public class NightSpiral : ModItem
         item.rare = 3;
         item.shoot = mod.ProjectileType("BouncyProj");
     }
+	
+	public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(null, "DarkSludge", 10);
+            recipe.SetResult(this, 1);
+            recipe.AddRecipe();
+        }
 }}

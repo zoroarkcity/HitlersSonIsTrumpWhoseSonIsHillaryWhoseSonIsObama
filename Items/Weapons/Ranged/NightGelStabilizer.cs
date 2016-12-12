@@ -28,6 +28,14 @@ public class NightGelStabilizer : ModItem
         item.scale = 0.9f;
     }
 	
+	public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(null, "DarkSludge", 10);
+            recipe.SetResult(this, 1);
+            recipe.AddRecipe();
+        }
+	
 	public override Vector2? HoldoutOffset()
 		{
 			return new Vector2(10, 0);
