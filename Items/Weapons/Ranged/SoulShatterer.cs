@@ -47,6 +47,7 @@ public class SoulShatterer : ModItem
 		{
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "AccursedBar", 10);
+			recipe.AddIngredient(ItemID.Musket, 1);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
