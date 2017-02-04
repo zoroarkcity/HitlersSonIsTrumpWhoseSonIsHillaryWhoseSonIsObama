@@ -12,7 +12,7 @@ public class VampireNecklace : ModItem
         item.width = 24;
         item.height = 28;
         item.toolTip = "Gives you a chance to steal life on enemy hit, increased armor penetration";
-        item.value = 10000;
+        item.value = 100000;
         item.rare = 2;
         item.accessory = true;
     }
@@ -28,6 +28,7 @@ public class VampireNecklace : ModItem
         ModRecipe recipe = new ModRecipe(mod);
         recipe.AddIngredient(null, "BloodHeart");
         recipe.AddIngredient(ItemID.SharkToothNecklace);
+		recipe.AddIngredient(154, 10);
         recipe.AddTile(114);
         recipe.SetResult(this);
         recipe.AddRecipe();

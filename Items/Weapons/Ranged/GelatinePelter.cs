@@ -33,13 +33,11 @@ namespace TGEM.Items.Weapons.Ranged
 		
 			public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 	{
-    		switch (Main.rand.Next(4))
+    		if (Main.rand.Next(4) == 0)
 			{
-    			case 1: type = 406; break;
-    			default: break;
+    			Projectile.NewProjectile(position.X, position.Y, speedX, speedY, 409, damage, knockBack, player.whoAmI);
 			}
-			Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, player.whoAmI, 0.0f, 0.0f);
-    	return false;
+    	return true; //409 is a placeholder until gel chunk projectile is added
 	}
 
         public override void AddRecipes()

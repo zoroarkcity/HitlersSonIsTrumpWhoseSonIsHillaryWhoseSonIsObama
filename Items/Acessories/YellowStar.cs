@@ -13,7 +13,7 @@ public class YellowStar : ModItem
         item.height = 28;
         item.toolTip = "Increased maximum mana by 20";
         item.value = 10000;
-        item.rare = 2;
+        item.rare = 1;
         item.accessory = true;
     }
 

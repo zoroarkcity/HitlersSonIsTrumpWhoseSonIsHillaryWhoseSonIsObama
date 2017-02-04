@@ -13,8 +13,8 @@ namespace TGEM.Items.Acessories
             item.width = 28;
             item.height = 20;
             item.toolTip = "Enhances your resistance to attacks and fire!";
-            item.value = 150000;
-            item.rare = 2;
+            item.value = 60000;
+            item.rare = 1;
             item.accessory = true;
         }
 

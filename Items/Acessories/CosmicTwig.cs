@@ -12,8 +12,8 @@ public class CosmicTwig : ModItem
         item.width = 24;
         item.height = 28;
         item.toolTip = "Increases health and mana by 40";
-        item.value = 10000;
-        item.rare = 2;
+        item.value = 120000;
+        item.rare = 1;
         item.accessory = true;
     }
 
@@ -26,7 +26,7 @@ public class CosmicTwig : ModItem
     public override void AddRecipes()
     {
         ModRecipe recipe = new ModRecipe(mod);
-        recipe.AddIngredient(null, "LivingTwig");
+        recipe.AddIngredient(null, "LifeTwig");
         recipe.AddIngredient(null, "ManaStar");
         recipe.AddTile(114);
         recipe.SetResult(this);

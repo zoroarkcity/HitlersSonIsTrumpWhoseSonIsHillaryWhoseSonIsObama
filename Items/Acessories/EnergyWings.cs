@@ -21,7 +21,7 @@ namespace TGEM.Items.Acessories
 			item.height = 20;
 			item.toolTip = "Provides a small boost";
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = 1;
 			item.accessory = true;
 		}
 

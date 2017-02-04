@@ -12,8 +12,8 @@ namespace TGEM.Items.Acessories
             item.width = 14;
             item.height = 14;
             item.toolTip = "Doubles Mining Speed.";
-            item.value = 10000;
-            item.rare = 2;
+            item.value = 100000;
+            item.rare = 3;
             item.accessory = true;
         }
 

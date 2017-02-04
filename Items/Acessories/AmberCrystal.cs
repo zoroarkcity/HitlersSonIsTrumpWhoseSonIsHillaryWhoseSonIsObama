@@ -13,7 +13,7 @@ public class AmberCrystal : ModItem
         item.height = 28;
         item.toolTip = "Summon attacks have a chance to create balls of sap";
 		item.toolTip2 = "A powerful crystal made from the powerful sap of the ghastly ent";
-        item.value = 10000;
+        item.value = 50000;
         item.rare = 2;
         item.accessory = true;
 		item.expert = true;

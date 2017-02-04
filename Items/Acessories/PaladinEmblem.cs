@@ -12,8 +12,8 @@ namespace TGEM.Items.Acessories
             item.width = 28;
             item.height = 28;
             item.toolTip = "Reduces damage taken by 12%";
-            item.value = Item.sellPrice(0, 3, 0, 0);
-            item.rare = 2;
+            item.value = 100000;
+            item.rare = 3;
             item.accessory = true;
         }
 

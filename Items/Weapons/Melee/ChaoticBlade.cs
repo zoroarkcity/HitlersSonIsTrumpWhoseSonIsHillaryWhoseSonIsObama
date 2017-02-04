@@ -24,12 +24,14 @@ namespace TGEM.Items.Weapons.Melee
             item.useTurn = true;
             item.width = 46;
             item.height = 48;
-            item.useTime = 30;
-            item.useAnimation = 30;
+            item.useTime = 50;
+            item.useAnimation = 25;
             item.useStyle = 1;
             item.UseSound = SoundID.Item1;
             item.value = 10000;
             item.rare = 5;
+			item.shoot = 280;
+			item.shootSpeed = 10;
 			item.autoReuse = true;
 			item.useTurn = true;
 
@@ -42,6 +44,14 @@ namespace TGEM.Items.Weapons.Melee
                 target.AddBuff(69, 360, false);
             }
         }
+		
+		public static void MeleeEffects(Item item, Player player, Rectangle hitbox)
+		{
+			if (Main.rand.Next(2) == 0)
+			{
+				int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, 228);
+			}
+		}
 
         public override void AddRecipes()
         {

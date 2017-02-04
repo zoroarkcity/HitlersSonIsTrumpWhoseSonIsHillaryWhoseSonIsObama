@@ -12,7 +12,7 @@ public class BloodHeart : ModItem
         item.width = 24;
         item.height = 28;
         item.toolTip = "Gives you a chance to steal life on enemy hit";
-        item.value = 10000;
+        item.value = 50000;
         item.rare = 2;
         item.accessory = true;
     }

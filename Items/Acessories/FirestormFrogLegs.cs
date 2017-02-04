@@ -13,7 +13,7 @@ namespace TGEM.Items.Acessories
             item.width = 34;
             item.height = 34;
             item.toolTip = "Enhances your jump, leaving behind fire, nullifying fall damage, and granting auto jump.";
-            item.value = 150000;
+            item.value = 200000;
             item.rare = 2;
             item.accessory = true;
         }

@@ -12,8 +12,8 @@ public class ManaStar : ModItem
         item.width = 24;
         item.height = 28;
         item.toolTip = "Increased maximum mana by 40";
-        item.value = 10000;
-        item.rare = 2;
+        item.value = 60000;
+        item.rare = 1;
         item.accessory = true;
     }
 
