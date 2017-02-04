@@ -21,6 +21,21 @@ namespace TGEM.Projectiles.Thrown
             projectile.ignoreWater = true;
             projectile.timeLeft = 6000;
         }
+		
+		public override void Kill(int timeLeft)
+        {
+        	if (Main.rand.Next(4) == 0)
+        	{
+        		Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("StingerShuriken"));
+        	}
+			for (int i = 0; i < 5; i++)
+			{
+				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 7);
+				Main.dust[dust].scale = 1.5f;
+				Main.dust[dust].noGravity = true;
+			}
+			Main.PlaySound(0, (int)projectile.position.X, (int)projectile.position.Y);
+        }
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {

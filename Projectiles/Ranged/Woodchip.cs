@@ -18,6 +18,14 @@ public class Woodchip : ModProjectile
 		projectile.aiStyle = 1;
         projectile.timeLeft = 90;
 	}
+	
+	public override bool OnTileCollide(Vector2 oldVelocity)
+		{
+			int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 7);
+			Main.dust[dust].scale = 1.5f;
+			Main.dust[dust].noGravity = true;
+			return true;
+		}
 
 
 }	

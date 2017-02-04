@@ -18,6 +18,21 @@ namespace TGEM.Projectiles.Thrown {
 		projectile.friendly = true;
         projectile.timeLeft = 3000;
 	}
+	
+	public override void Kill(int timeLeft)
+        {
+        	if (Main.rand.Next(11) == 0)
+        	{
+        		Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("PowerKnife"));
+        	}
+			for (int i = 0; i < 5; i++)
+			{
+				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 10);
+				Main.dust[dust].scale = 1.5f;
+				Main.dust[dust].noGravity = true;
+			}
+			Main.PlaySound(0, (int)projectile.position.X, (int)projectile.position.Y);
+        }
 
     public override bool PreAI()
     {

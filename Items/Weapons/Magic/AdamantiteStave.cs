@@ -46,8 +46,8 @@ namespace TGEM.Items.Weapons.Magic
         {
 			
 			int p4 = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, player.whoAmI, 0, 0);
-			Main.projectile[p4].timeLeft = 100;
 			Main.projectile[p4].extraUpdates = 100;
+			Main.projectile[p4].penetrate = 4;
 			return false;
 		}
     }

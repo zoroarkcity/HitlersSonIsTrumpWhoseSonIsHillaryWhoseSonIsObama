@@ -20,6 +20,19 @@ namespace TGEM.Projectiles.Ranged
             projectile.penetrate = -1;
             projectile.timeLeft = 600;
         }
+		
+		
+		public override void Kill(int timeLeft)
+		{
+			for (int i = 0; i < 5; i++)
+			{
+				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 14);
+				Main.dust[dust].scale = 1.5f;
+				Main.dust[dust].noGravity = true;
+			}
+			Main.PlaySound(0, (int)projectile.position.X, (int)projectile.position.Y);
+		}
+
 
 		
 		public override void AI()

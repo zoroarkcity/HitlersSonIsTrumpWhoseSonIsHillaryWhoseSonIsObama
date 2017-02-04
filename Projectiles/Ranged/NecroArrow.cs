@@ -30,6 +30,18 @@ namespace TGEM.Projectiles.Ranged
             }
         }
 		
+		public override void Kill(int timeLeft)
+		{
+			for (int i = 0; i < 5; i++)
+			{
+				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 18);
+				Main.dust[dust].scale = 1.5f;
+				Main.dust[dust].noGravity = true;
+			}
+			Main.PlaySound(0, (int)projectile.position.X, (int)projectile.position.Y);
+		}
+
+		
 		public override void AI()
 		{
 			if (Main.rand.Next(3) == 0)

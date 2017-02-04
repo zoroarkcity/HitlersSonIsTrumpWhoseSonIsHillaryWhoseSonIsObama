@@ -21,6 +21,17 @@ namespace TGEM.Projectiles.Ranged
             projectile.extraUpdates = 1;
             aiType = 1;
         }
+		
+		public override void Kill(int timeLeft)
+		{
+			for (int i = 0; i < 5; i++)
+			{
+				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 6);
+				Main.dust[dust].scale = 1.5f;
+				Main.dust[dust].noGravity = true;
+			}
+			Main.PlaySound(0, (int)projectile.position.X, (int)projectile.position.Y);
+		}
 
         public override void AI()
         {
@@ -31,8 +42,8 @@ namespace TGEM.Projectiles.Ranged
 		
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            projectile.velocity.X *= 0.25f;
-			projectile.velocity.Y *= 0.25f;
+            projectile.velocity.X *= 0.75f;
+			projectile.velocity.Y *= 0.75f;
         }
     }
 }

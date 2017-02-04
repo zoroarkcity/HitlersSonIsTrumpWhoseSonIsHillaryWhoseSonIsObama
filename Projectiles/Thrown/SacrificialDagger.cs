@@ -27,6 +27,13 @@ namespace TGEM.Projectiles.Thrown
         	{
         		Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("SacrificialDagger"));
         	}
+			for (int i = 0; i < 5; i++)
+			{
+				int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 65);
+				Main.dust[dust].scale = 1.5f;
+				Main.dust[dust].noGravity = true;
+			}
+			Main.PlaySound(0, (int)projectile.position.X, (int)projectile.position.Y);
         }
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
