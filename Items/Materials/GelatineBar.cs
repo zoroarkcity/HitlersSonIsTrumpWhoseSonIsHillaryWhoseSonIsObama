@@ -11,8 +11,7 @@ namespace TGEM.Items.Materials
 			item.width = 8;
 			item.height = 8;
 			item.maxStack = 999;
-			AddTooltip("Soft and easily moldable");
-			item.value = 100;
+			item.value = 14000;
 			item.rare = 1;
 
         }

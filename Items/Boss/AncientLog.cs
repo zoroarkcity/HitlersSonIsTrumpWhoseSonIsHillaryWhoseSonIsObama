@@ -13,7 +13,7 @@ public override void SetDefaults()
         item.height = 32;
         item.maxStack = 20;
         item.toolTip = "Summons the Ghastly Ent";
-        item.rare = 1;
+        item.rare = 0;
         item.useAnimation = 45;
         item.useTime = 45;
         item.useStyle = 4;

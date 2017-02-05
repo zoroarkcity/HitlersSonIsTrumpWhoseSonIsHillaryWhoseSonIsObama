@@ -14,8 +14,8 @@ namespace TGEM.Items.Materials
 			item.width = 10;
 			item.height = 10;
 			item.noMelee = true; 
-			item.value = 10000;
-			item.rare = 0;
+			item.value = 25000;
+			item.rare = 3;
 			item.scale = 0.75f;
 			item.maxStack = 999;
 		}

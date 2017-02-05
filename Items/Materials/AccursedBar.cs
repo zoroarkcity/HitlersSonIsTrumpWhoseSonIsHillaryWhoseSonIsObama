@@ -12,7 +12,8 @@ namespace TGEM.Items.Materials
             item.width = 34;
             item.height = 26;
             item.maxStack = 99;
-            item.rare = 0;
+            item.rare = 3;
+			item.value = 20000;
         }
 
         public override void AddRecipes()

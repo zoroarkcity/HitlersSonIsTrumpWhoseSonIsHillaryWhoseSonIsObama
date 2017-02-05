@@ -20,8 +20,8 @@ namespace TGEM.Items.Armor
 			item.width = 18;
 			item.height = 18;
 			AddTooltip("7% increased summon damage");
-			item.value = 10000;
-			item.rare = 2;
+			item.value = 25000;
+			item.rare = 1;
 			item.defense = 2;
             item.lifeRegen = 3;
 		}

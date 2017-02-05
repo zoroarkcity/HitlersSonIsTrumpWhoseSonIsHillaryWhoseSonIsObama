@@ -48,11 +48,25 @@ namespace TGEM.Projectiles.Thrown
             item.shoot = mod.ProjectileType("AdamantiteShurikenP");
             item.name = "Adamantite Shuriken";
             item.rare = 4;
-			item.useTime = 13;
-			item.useAnimation = 13;
+			item.useTime = 23;
+			item.useAnimation = 23;
             item.shootSpeed = 19f;
             item.autoReuse = true;
         }
+		
+		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		{
+			int amountOfProjectiles = Main.rand.Next(2, 4);
+			for (int i = 0; i < amountOfProjectiles; ++i)
+			{
+				float sX = speedX;
+				float sY = speedY;
+				sX += (float)Main.rand.Next(-60, 61) * 0.05f;
+				sY += (float)Main.rand.Next(-60, 61) * 0.05f;
+				Projectile.NewProjectile(position.X, position.Y, sX, sY, mod.ProjectileType("AdamantiteShurikenP"), damage, knockBack, player.whoAmI);
+			}
+			return false;
+		}
 
         public override void AddRecipes()
         {

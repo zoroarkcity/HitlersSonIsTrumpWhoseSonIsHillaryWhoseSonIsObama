@@ -20,8 +20,8 @@ namespace TGEM.Items.Armor
 			item.width = 18;
 			item.height = 18;
 			item.toolTip = "10% increased movement speed";
-			item.value = 10000;
-			item.rare = 2;
+			item.value = 35000;
+			item.rare = 1;
 			item.defense = 3;
 		}
 

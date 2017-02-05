@@ -12,7 +12,7 @@ namespace TGEM.Items.Materials
 			item.height = 8;
 			item.maxStack = 999;
 			AddTooltip("Smells and looks disgusting");
-			item.value = 100;
+			item.value = 18000;
 			item.rare = 1;
 
         }

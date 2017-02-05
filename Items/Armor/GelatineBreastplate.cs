@@ -20,8 +20,8 @@ namespace TGEM.Items.Armor
 			item.width = 18;
 			item.height = 18;
 			AddTooltip("Increases your maxiumum minions by 1");
-			item.value = 10000;
-			item.rare = 2;
+			item.value = 30000;
+			item.rare = 1;
 			item.defense = 4;
 		}
 

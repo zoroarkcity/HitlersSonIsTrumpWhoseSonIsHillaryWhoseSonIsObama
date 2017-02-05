@@ -11,9 +11,8 @@ namespace TGEM.Items.Materials
 			item.width = 8;
 			item.height = 8;
 			item.maxStack = 999;
-			AddTooltip("The work of a master of necromancy.");
-			item.value = 100;
-			item.rare = 1;
+			item.value = 20000;
+			item.rare = 3;
 
         }
 

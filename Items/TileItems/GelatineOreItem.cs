@@ -15,8 +15,8 @@ namespace TGEM.Items.TileItems
             item.useAnimation = 15;
             item.useTime = 10;
             item.useStyle = 1;
-            item.value = 50;
-            item.rare = 2;
+            item.value = 4500;
+            item.rare = 1;
 			item.consumable = true;
 			item.autoReuse = true;
             item.createTile = mod.TileType("GelatineOre");
